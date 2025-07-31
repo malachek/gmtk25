@@ -10,9 +10,11 @@ public class InputManager : MonoBehaviour
     [SerializeField] InputActionAsset inputActions;
     InputAction RotateAction;
     InputAction JumpAction;
+    InputAction SprintAction;
 
     [Space(10)]
     [SerializeField] RotationManager rotationManager;
+    [SerializeField] PlayerMovement playerMovement;
 
 
     private void OnEnable()
@@ -20,14 +22,17 @@ public class InputManager : MonoBehaviour
         var playerMap = inputActions.FindActionMap("Player");
         RotateAction = playerMap.FindAction("Rotate");
         JumpAction = playerMap.FindAction("Jump");
+        SprintAction = playerMap.FindAction("Sprint");
 
         RotateAction.Enable();
         JumpAction.Enable();
+        SprintAction.Enable();
     }
     private void OnDisable()
     {
         RotateAction.Disable();
         JumpAction.Disable();
+        SprintAction.Disable();
     }
 
     private void Update()
@@ -37,13 +42,24 @@ public class InputManager : MonoBehaviour
 
     private void ProcessInputs()
     {
-        if(RotateAction.IsPressed())
+        if (RotateAction.IsPressed())
         {
-            rotationManager.RotationInput(RotateAction.ReadValue<float>() > 0);
+            //Debug.Log(RotateAction.ReadValue<float>() > 0 ? "CCW" : "CW");
+            playerMovement.RotationInputOverride(RotateAction.ReadValue<float>() > 0);
         }
-        if (JumpAction.WasPressedThisFrame())
+        if (JumpAction.IsPressed())
         {
-            Debug.Log("jump");
+            playerMovement.Jump(JumpAction);
+        }
+        if (SprintAction.WasPressedThisFrame())
+        {
+            Debug.Log("Sprint Start");
+            playerMovement.SetSprint(true);
+        }
+        if (SprintAction.WasReleasedThisFrame())
+        {
+            Debug.Log("Sprint Stop");
+            playerMovement.SetSprint(false);
         }
     }
 }
