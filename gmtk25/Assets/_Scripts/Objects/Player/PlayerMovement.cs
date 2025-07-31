@@ -17,8 +17,16 @@ public class PlayerMovement : MonoBehaviour
         playerRotation.SetSprint(isSprint);
     }
 
-    public void Jump(InputAction jumpAction)
+    public void StartJump()
     {
-        playerJump.Jump(jumpAction);
+        playerJump.StartJump();
+    }
+    public void HoldJump()
+    {
+        playerJump.HoldJump();
+    }
+    public void EndJump()
+    {
+        playerJump.EndJump();
     }
 }

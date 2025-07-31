@@ -13,7 +13,7 @@ public class PlayerJump : MonoBehaviour
     [SerializeField] float groundY = 0f;
 
     private float jumpTimeCounter = 0f;
-    private bool isJumping = false;
+    private bool isJumpHeld = false;
     private float yVelocity = 0f;
     private bool IsGrounded;
 
@@ -28,7 +28,7 @@ public class PlayerJump : MonoBehaviour
     {
         if (!IsGrounded)
         {
-            bool isFalling = (yVelocity > 0f && isJumping) || yVelocity < 0f;
+            bool isFalling = !isJumpHeld || yVelocity < 0f;
             yVelocity += gravity * Time.deltaTime * (isFalling ? fallMultiplier : 1f);
         }
     }
@@ -43,7 +43,7 @@ public class PlayerJump : MonoBehaviour
         if (transform.position.y <= groundY)
         {
             IsGrounded = true;
-            isJumping = false;
+            isJumpHeld = false;
 
             yVelocity = 0f;
 
@@ -57,42 +57,42 @@ public class PlayerJump : MonoBehaviour
         }
     }
 
-    public void Jump(InputAction jumpAction)
+    public void StartJump()
     {
-        if (IsGrounded && jumpAction.WasPressedThisFrame())
+        if (IsGrounded || !IsGrounded && yVelocity < 0f && transform.position.y < .1f)
         {
-            isJumping = true;
+            isJumpHeld = true;
             jumpTimeCounter = maxJumpTime;
             yVelocity = jumpForce;
             IsGrounded = false;
             Debug.Log("Start Jump");
             return;
         }
-
-        if (jumpAction.WasReleasedThisFrame())
+    }
+    public void HoldJump()
+    {
+        if (isJumpHeld)
         {
-            isJumping = false;
-            Debug.Log("End Jump");
-            return;
-        }
-
-        if (isJumping && jumpAction.IsPressed())
-        {
-            if(jumpTimeCounter > 0f)
+            if (jumpTimeCounter > 0f)
             {
-                if(jumpTimeCounter < maxJumpTime * .8f)
+                if (jumpTimeCounter < maxJumpTime * .8f)
                 {
                     yVelocity = jumpForce;
-                    jumpTimeCounter -= Time.deltaTime;
                 }
+                jumpTimeCounter -= Time.deltaTime;
+                Debug.Log("Continue Jump");
             }
             else
             {
-                isJumping = false;
+                isJumpHeld = false;
             }
-            Debug.Log("Continue Jump");
         }
-
-        
     }
+    public void EndJump()
+    {
+        isJumpHeld = false;
+        Debug.Log("End Jump");
+        return;
+    }
+
 }

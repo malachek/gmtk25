@@ -23,20 +23,23 @@ public class PlayerRotation : MonoBehaviour
         maxVelocity = maxWalkVelocity;
     }
 
-
+    private void Update()
+    {
+        //Debug.Log($"Velocity: {Velocity} | Acceleration: {_acceleration} | Degrees: {Degrees}");
+    }
     private void UpdateRotation()
     {
-        if (Degrees > 350f && Velocity > 0f)
+        if (Degrees > maxDegrees && Velocity > 0f || Degrees + Velocity > maxDegrees)
         {
-            Degrees = 350f;
+            Degrees = maxDegrees;
             Velocity = 0f;
         }
-        if (Degrees < 10f && Velocity < 0f)
+        if (Degrees < minDegrees && Velocity < 0f || Degrees + Velocity < minDegrees)
         {
-            Degrees = 10f;
+            Degrees = minDegrees;
             Velocity = 0f;
         }
-        Degrees = (Degrees + Velocity) % 360f;
+        Degrees = (Degrees + Velocity * Time.deltaTime) % 360f;
         RotatePlayerTo(Degrees);
     }
 

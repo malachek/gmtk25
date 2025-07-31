@@ -27,39 +27,62 @@ public class InputManager : MonoBehaviour
         RotateAction.Enable();
         JumpAction.Enable();
         SprintAction.Enable();
+
+        JumpAction.started += OnJumpStarted;
+        JumpAction.performed += OnJumpPerformed;
+        JumpAction.canceled += OnJumpCanceled;
+
+        SprintAction.started += OnSprintStarted;
+        SprintAction.canceled += OnSprintCanceled;
     }
     private void OnDisable()
     {
         RotateAction.Disable();
         JumpAction.Disable();
         SprintAction.Disable();
+
+        JumpAction.started -= OnJumpStarted;
+        JumpAction.performed -= OnJumpPerformed;
+        JumpAction.canceled -= OnJumpCanceled;
+
+        SprintAction.started -= OnSprintStarted;
+        SprintAction.canceled -= OnSprintCanceled;
     }
 
     private void Update()
     {
-        ProcessInputs();
-    }
-
-    private void ProcessInputs()
-    {
         if (RotateAction.IsPressed())
         {
-            //Debug.Log(RotateAction.ReadValue<float>() > 0 ? "CCW" : "CW");
             playerMovement.RotationInputOverride(RotateAction.ReadValue<float>() > 0);
         }
-        if (JumpAction.IsPressed())
-        {
-            playerMovement.Jump(JumpAction);
-        }
-        if (SprintAction.WasPressedThisFrame())
-        {
-            Debug.Log("Sprint Start");
-            playerMovement.SetSprint(true);
-        }
-        if (SprintAction.WasReleasedThisFrame())
-        {
-            Debug.Log("Sprint Stop");
-            playerMovement.SetSprint(false);
-        }
     }
+
+    private void OnRotatePerformed(InputAction.CallbackContext context)
+    {
+        Debug.Log(context.ReadValue<float>());
+        playerMovement.RotationInputOverride(context.ReadValue<float>() > 0);
+    }
+
+    private void OnJumpStarted(InputAction.CallbackContext context)
+    {
+        playerMovement.StartJump();
+    }
+    private void OnJumpPerformed(InputAction.CallbackContext context)
+    {
+        playerMovement.HoldJump();
+    }
+    private void OnJumpCanceled(InputAction.CallbackContext context)
+    {
+        playerMovement.EndJump();
+    }
+
+    private void OnSprintStarted(InputAction.CallbackContext context)
+    {
+        playerMovement.SetSprint(true);
+    }
+    private void OnSprintCanceled(InputAction.CallbackContext context)
+    {
+        playerMovement.SetSprint(false);
+    }
+ 
 }

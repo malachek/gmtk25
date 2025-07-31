@@ -1176,7 +1176,7 @@ MonoBehaviour:
   m_StreamingVersion: 20241001
   m_LegacyPriority: 0
   Target:
-    TrackingTarget: {fileID: 1656787802}
+    TrackingTarget: {fileID: 0}
     LookAtTarget: {fileID: 0}
     CustomLookAtTarget: 0
   Lens:
@@ -1254,7 +1254,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6072091035393654923}
-  - component: {fileID: 6072091035393654924}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1494,8 +1493,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ebc77a393f0ba44fae01e4fd2f8e5ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _acceleration: 4.5
-  maxWalkVelocity: 1.5
+  _acceleration: 135
+  maxWalkVelocity: 45
   sprintMultiplier: 1.5
   maxDegrees: 350
   minDegrees: 10
@@ -1515,18 +1514,6 @@ Transform:
   - {fileID: 145145604667774226}
   m_Father: {fileID: 4143754450527950978}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6072091035393654924
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 985168410233695243}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49c3e28a95a30ae468e72686f5806a74, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &6543251033057399532
 MonoBehaviour:
   m_ObjectHideFlags: 0
