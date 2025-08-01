@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{8ae35f93-ec2b-4730-b9b2-4ae8c662be0c}">
+		<property name="assetPath">
+			<value>shorter_dirt_sample-04.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>0.23300000000000001</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{2c488fea-5562-474e-86a7-2cd8a1c3cd48}</destination>
+		</relationship>
+	</object>
+</objects>
