@@ -14,9 +14,9 @@ public class disc_generation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        int num = UnityEngine.Random.Range(0, segments.Length - 1);
-        int num2 = UnityEngine.Random.Range(0, 1);
-        UpdateSlice(num2 != 0, num);
+        //int num = UnityEngine.Random.Range(0, segments.Length - 1);
+        //int num2 = UnityEngine.Random.Range(0, 1);
+        //UpdateSlice(num2 != 0, num);
     }
 
     public void UpdateSlice(bool show, int segment)
