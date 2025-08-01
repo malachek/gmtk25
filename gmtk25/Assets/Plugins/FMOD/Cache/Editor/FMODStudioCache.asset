@@ -1,0 +1,247 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-5474212572772743842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character/FrogCroak
+  m_EditorClassIdentifier: 
+  Path: event:/Character/FrogCroak
+  Guid:
+    Data1: 667487324
+    Data2: 1322978071
+    Data3: -1082581865
+    Data4: -2702308
+  Banks:
+  - {fileID: 3026688024717527536}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-2889990736534702766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: 2025 GMTK game jam FMOD/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638896562406557290
+  FileSizes:
+  - Name: Desktop
+    Value: 1098
+  Exists: 1
+--- !u!114 &-283954867780910663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character/Footsteps/DirtFootsteps
+  m_EditorClassIdentifier: 
+  Path: event:/Character/Footsteps/DirtFootsteps
+  Guid:
+    Data1: 288636341
+    Data2: 1170463554
+    Data3: 1727256744
+    Data4: -200197260
+  Banks:
+  - {fileID: 3026688024717527536}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  EditorBanks:
+  - {fileID: -2889990736534702766}
+  - {fileID: 1638662616759134778}
+  - {fileID: 5151402824549773630}
+  - {fileID: 3026688024717527536}
+  EditorEvents:
+  - {fileID: 5391872933693240262}
+  - {fileID: 8750452403933939513}
+  - {fileID: -5474212572772743842}
+  - {fileID: 2403127988671478285}
+  - {fileID: -283954867780910663}
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: 5151402824549773630}
+  StringsBanks:
+  - {fileID: -2889990736534702766}
+  cacheTime: 638896562407419465
+  cacheVersion: 131625
+--- !u!114 &1638662616759134778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Evironment.bank
+  m_EditorClassIdentifier: 
+  Path: 2025 GMTK game jam FMOD/Build/Desktop/Evironment.bank
+  Name: Evironment
+  StudioPath: bank:/Evironment
+  lastModified: 638896562406424712
+  FileSizes:
+  - Name: Desktop
+    Value: 12256
+  Exists: 1
+--- !u!114 &2403127988671478285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character/Footsteps/SandFootsteps
+  m_EditorClassIdentifier: 
+  Path: event:/Character/Footsteps/SandFootsteps
+  Guid:
+    Data1: 1706631349
+    Data2: 1154737201
+    Data3: 376999348
+    Data4: -1735288940
+  Banks:
+  - {fileID: 3026688024717527536}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &3026688024717527536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/PlayerSFX.bank
+  m_EditorClassIdentifier: 
+  Path: 2025 GMTK game jam FMOD/Build/Desktop/PlayerSFX.bank
+  Name: PlayerSFX
+  StudioPath: bank:/PlayerSFX
+  lastModified: 638896562407419465
+  FileSizes:
+  - Name: Desktop
+    Value: 101280
+  Exists: 1
+--- !u!114 &5151402824549773630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: 2025 GMTK game jam FMOD/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 638896562406516815
+  FileSizes:
+  - Name: Desktop
+    Value: 1036
+  Exists: 1
+--- !u!114 &5391872933693240262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Environment/DestroyedObstacle
+  m_EditorClassIdentifier: 
+  Path: event:/Environment/DestroyedObstacle
+  Guid:
+    Data1: 1508237344
+    Data2: 1282533207
+    Data3: -483556713
+    Data4: 902977176
+  Banks:
+  - {fileID: 1638662616759134778}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &8750452403933939513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character/Footsteps/RockFootsteps
+  m_EditorClassIdentifier: 
+  Path: event:/Character/Footsteps/RockFootsteps
+  Guid:
+    Data1: 465850158
+    Data2: 1335844778
+    Data3: 1520230536
+    Data4: -663298543
+  Banks:
+  - {fileID: 3026688024717527536}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
