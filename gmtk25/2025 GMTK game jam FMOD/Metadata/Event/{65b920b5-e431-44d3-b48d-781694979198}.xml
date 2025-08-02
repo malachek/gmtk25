@@ -5,7 +5,7 @@
 			<value>SandFootsteps</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{7d3b143e-d1a5-4e19-8e08-ca316a2a780b}</destination>
@@ -56,7 +56,7 @@
 			<destination>{fe340833-c984-45d3-a949-e04fdfa26c9d}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{1f21f729-7ce8-4d70-bac2-ba8907788726}</destination>
+			<destination>{59d375c1-912d-4f39-8611-85068d75083c}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{73ad2e9d-98ba-4666-a5b9-ec9e3586458c}" />
@@ -96,6 +96,7 @@
 	<object class="MixerBusEffectChain" id="{f176e897-a9b1-44df-9529-47ee86bc359b}">
 		<relationship name="effects">
 			<destination>{567168b6-4cec-402d-a152-528a289cae92}</destination>
+			<destination>{c3a873d4-fee7-4390-ba7e-f8488eb0e0a0}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{8ff6d96d-0c6b-4429-9173-fc83a7ff1b5a}" />
@@ -111,6 +112,7 @@
 	</object>
 	<object class="MixerBusFader" id="{c32cee82-e26d-4f52-8ab3-3e23762970cc}" />
 	<object class="MixerBusFader" id="{567168b6-4cec-402d-a152-528a289cae92}" />
+	<object class="SpatialiserEffect" id="{c3a873d4-fee7-4390-ba7e-f8488eb0e0a0}" />
 	<object class="SingleSound" id="{f05a4223-9a8e-4bff-8c30-f4719185235d}">
 		<relationship name="audioFile">
 			<destination>{3c6d3673-5383-4d47-bcc1-3189c31d235c}</destination>
