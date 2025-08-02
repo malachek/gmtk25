@@ -35,10 +35,11 @@ public class RingCollision : MonoBehaviour
             if (!IsAngleOverlap(player, obj)) continue;
 
             //Debug.Log($"Collided with: {obj.name}, pushing back with extra {currOverlap} dg force");
-
+            
             //Debug.Log(currOverlap);
             player.PushBack(Mathf.Max(currOverlap * 2f, 0f));
         }
+       
 
     }
 
@@ -58,6 +59,7 @@ public class RingCollision : MonoBehaviour
     {
         //Debug.Log($"Player Bottom Y: {obj1.transform.position.y} | Obstacle Top Y: {obj2.transform.position.y + obj2.GetYHeight() * .5f} | Collided? : {obj1.transform.position.y <= obj2.transform.position.y + obj2.GetYHeight() * .5f}");
         return obj1.transform.position.y + jumpTolerance <= obj2.transform.position.y + obj2.GetYHeight() * .5f;
+       
     }
 
     private bool IsAngleOverlap(RingObject obj1, RingObject obj2)
@@ -73,7 +75,7 @@ public class RingCollision : MonoBehaviour
         //if(playerRightEdge - degreeTolerance <= objectLeftEdge) Debug.Log($"player right: {playerRightEdge} | object left: {objectLeftEdge}");
 
         currOverlap = objectLeftEdge - playerRightEdge;
-
+       
         return (playerRightEdge - degreeTolerance <= objectLeftEdge);
     }
 

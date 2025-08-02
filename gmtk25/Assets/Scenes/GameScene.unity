@@ -291,6 +291,20 @@ MonoBehaviour:
       Data3: 1520230536
       Data4: -663298543
     Path: event:/Character/Footsteps/RockFootsteps
+  <CoconutHit>k__BackingField:
+    Guid:
+      Data1: 1356626175
+      Data2: 1119431275
+      Data3: -979939150
+      Data4: 1337400156
+    Path: event:/Environment/Coconut/CoconutHit
+  <FrogCroak>k__BackingField:
+    Guid:
+      Data1: 667487324
+      Data2: 1322978071
+      Data3: -1082581865
+      Data4: -2702308
+    Path: event:/Character/FrogCroak
 --- !u!1 &191231127
 GameObject:
   m_ObjectHideFlags: 0
@@ -1877,6 +1891,7 @@ MonoBehaviour:
   jumpForce: 5
   gravity: -10
   fallMultiplier: 2
+  PlayerSoundSource: {fileID: 985168410233695243}
   maxJumpTime: 0.1
   groundY: 0
 --- !u!114 &4958270347211835054

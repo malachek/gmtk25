@@ -9,6 +9,13 @@ public class FMODEvents : MonoBehaviour
     [field: Header("Rock Footstep")]
     [field: SerializeField] public EventReference RockStep { get; private set; }
 
+    [field: Header("Coconut Hit")]
+    [field: SerializeField] public EventReference CoconutHit { get; private set; }
+
+    [field: Header("FrogCroak")]
+    [field: SerializeField] public EventReference FrogCroak { get; private set; }
+
+
 
     //Example for future one shot referrences
     //AudioManager.instance.PlayOneShot(FMODEvents.instance.sonarPing, this.transform.position);
