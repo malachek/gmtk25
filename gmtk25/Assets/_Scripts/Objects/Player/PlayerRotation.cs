@@ -29,12 +29,12 @@ public class PlayerRotation : MonoBehaviour
     }
     private void UpdateRotation()
     {
-        if (Degrees > maxDegrees && Velocity > 0f || Degrees + Velocity > maxDegrees)
+        if (Degrees > maxDegrees && Velocity > 0f || Degrees + Velocity * Time.deltaTime > maxDegrees)
         {
             Degrees = maxDegrees;
             Velocity = 0f;
         }
-        if (Degrees < minDegrees && Velocity < 0f || Degrees + Velocity < minDegrees)
+        if (Degrees < minDegrees && Velocity < 0f || Degrees + Velocity * Time.deltaTime < minDegrees)
         {
             Degrees = minDegrees;
             Velocity = 0f;

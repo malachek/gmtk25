@@ -2,13 +2,21 @@ using UnityEngine;
 
 public class disc_generation : MonoBehaviour
 {
+    [SerializeField] 
 
-    [SerializeField] GameObject[] segments;
+    private GameObject[] segments;
+    private int nextSegmentToZero;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+    private void Awake()
+    {
+        //spawn the segments
+
+    }
     void Start()
     {
-        
+        //nextSegmentToZero = segments[0];
     }
 
     // Update is called once per frame
