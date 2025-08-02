@@ -36,7 +36,7 @@ public class RingCollision : MonoBehaviour
 
             //Debug.Log($"Collided with: {obj.name}, pushing back with extra {currOverlap} dg force");
 
-            Debug.Log(currOverlap);
+            //Debug.Log(currOverlap);
             player.PushBack(Mathf.Max(currOverlap * 2f, 0f));
         }
 
@@ -70,7 +70,7 @@ public class RingCollision : MonoBehaviour
         float playerRightEdge = dg1 - obj1.GetXWidth() * .5f;
         float objectLeftEdge = dg2 + obj2.GetXWidth() * .5f;
 
-        if(playerRightEdge - degreeTolerance <= objectLeftEdge) Debug.Log($"player right: {playerRightEdge} | object left: {objectLeftEdge}");
+        //if(playerRightEdge - degreeTolerance <= objectLeftEdge) Debug.Log($"player right: {playerRightEdge} | object left: {objectLeftEdge}");
 
         currOverlap = objectLeftEdge - playerRightEdge;
 
