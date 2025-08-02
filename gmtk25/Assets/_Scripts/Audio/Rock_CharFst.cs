@@ -7,16 +7,16 @@ public class Rock_CharFst : MonoBehaviour
     private string EventPath = "event:/Character/Footsteps/RockFootsteps";
 
 
-     //FOR testing
-    //private void Update()
-    //{
+    //FOR testing
+    private void Update()
+    {
 
-    //    if (Input.GetKeyDown(KeyCode.J))
-    //    {
-    //        AudioManager.instance.PlayOneShot(FMODEvents.instance.RockStep, this.transform.position);
-    //        Debug.Log("Playing Rock Footstep");
-    //    }
-    //}
+        if (Input.GetKeyDown(KeyCode.J))
+        {
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.RockStep, this.transform.position);
+            Debug.Log("Playing Rock Footstep");
+        }
+    }
     void PlayRockFootstepEvent()
     {
 
