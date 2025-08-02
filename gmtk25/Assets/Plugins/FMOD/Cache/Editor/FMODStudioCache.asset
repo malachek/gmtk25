@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7139084427952023143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Environment/Coconut/CoconutRolling
+  m_EditorClassIdentifier: 
+  Path: event:/Environment/Coconut/CoconutRolling
+  Guid:
+    Data1: 902019361
+    Data2: 1096910297
+    Data3: -921321579
+    Data4: -1934551635
+  Banks:
+  - {fileID: 1638662616759134778}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 6184
 --- !u!114 &-5474212572772743842
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27,6 +54,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-4730377014596719279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Environment/Coconut/CoconutHit
+  m_EditorClassIdentifier: 
+  Path: event:/Environment/Coconut/CoconutHit
+  Guid:
+    Data1: 1356626175
+    Data2: 1119431275
+    Data3: -979939150
+    Data4: 1337400156
+  Banks:
+  - {fileID: 1638662616759134778}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-2889990736534702766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42,10 +96,10 @@ MonoBehaviour:
   Path: 2025 GMTK game jam FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638896805770734183
+  lastModified: 638896803575657046
   FileSizes:
   - Name: Desktop
-    Value: 1098
+    Value: 1318
   Exists: 1
 --- !u!114 &-283954867780910663
 MonoBehaviour:
@@ -68,7 +122,7 @@ MonoBehaviour:
   Banks:
   - {fileID: 3026688024717527536}
   IsStream: 0
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
@@ -97,12 +151,14 @@ MonoBehaviour:
   - {fileID: -5474212572772743842}
   - {fileID: 2403127988671478285}
   - {fileID: -283954867780910663}
+  - {fileID: -7139084427952023143}
+  - {fileID: -4730377014596719279}
   EditorParameters: []
   MasterBanks:
   - {fileID: 5151402824549773630}
   StringsBanks:
   - {fileID: -2889990736534702766}
-  cacheTime: 638896805771421409
+  cacheTime: 638896804302102422
   cacheVersion: 131625
 --- !u!114 &1638662616759134778
 MonoBehaviour:
@@ -119,10 +175,10 @@ MonoBehaviour:
   Path: 2025 GMTK game jam FMOD/Build/Desktop/Evironment.bank
   Name: Evironment
   StudioPath: bank:/Evironment
-  lastModified: 638896805770674063
+  lastModified: 638896804302102422
   FileSizes:
   - Name: Desktop
-    Value: 12256
+    Value: 65504
   Exists: 1
 --- !u!114 &2403127988671478285
 MonoBehaviour:
@@ -145,7 +201,7 @@ MonoBehaviour:
   Banks:
   - {fileID: 3026688024717527536}
   IsStream: 0
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
@@ -166,10 +222,10 @@ MonoBehaviour:
   Path: 2025 GMTK game jam FMOD/Build/Desktop/PlayerSFX.bank
   Name: PlayerSFX
   StudioPath: bank:/PlayerSFX
-  lastModified: 638896805771421409
+  lastModified: 638896803575944299
   FileSizes:
   - Name: Desktop
-    Value: 101280
+    Value: 102144
   Exists: 1
 --- !u!114 &5151402824549773630
 MonoBehaviour:
@@ -186,10 +242,10 @@ MonoBehaviour:
   Path: 2025 GMTK game jam FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638896805770714230
+  lastModified: 638896803575644631
   FileSizes:
   - Name: Desktop
-    Value: 1036
+    Value: 1486
   Exists: 1
 --- !u!114 &5391872933693240262
 MonoBehaviour:
@@ -239,7 +295,7 @@ MonoBehaviour:
   Banks:
   - {fileID: 3026688024717527536}
   IsStream: 0
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
