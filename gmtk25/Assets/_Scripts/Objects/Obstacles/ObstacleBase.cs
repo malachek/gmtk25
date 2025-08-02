@@ -1,20 +1,30 @@
 using UnityEngine;
 
-public class ObstacleBase : MonoBehaviour
+public class ObstacleBase : RingObject
 {
     private Vector3 startScale;
     private bool hasPassedZero = false;
 
     private int powerLevel = 1;
 
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         startScale = transform.localScale;
     }
 
     void Update()
     {
         CheckZeroCol();
+    }
+
+    public override float GetYHeight()
+    {
+        return base.GetYHeight() + powerLevel * .2f; //scaling scale
+    }
+    public override float GetXWidth()
+    {
+        return base.GetXWidth() * powerLevel * .2f; 
     }
 
     private void CheckZeroCol()

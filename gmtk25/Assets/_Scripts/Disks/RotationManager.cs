@@ -8,7 +8,7 @@ public class RotationManager : MonoBehaviour
 {
     [SerializeField] Transform DiskTransform;
 
-    float velocity;
+    public float velocity { get; private set; }
     [SerializeField] float acceleration;
     [SerializeField] float maxVelocity;
 

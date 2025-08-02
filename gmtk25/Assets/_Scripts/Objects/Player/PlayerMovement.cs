@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-[RequireComponent(typeof(PlayerRotation))]
+//[RequireComponent(typeof(PlayerRotation))]
 [RequireComponent(typeof(PlayerJump))]
 public class PlayerMovement : MonoBehaviour
 {
