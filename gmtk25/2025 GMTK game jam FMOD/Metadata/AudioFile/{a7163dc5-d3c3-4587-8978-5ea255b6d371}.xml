@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{a7163dc5-d3c3-4587-8978-5ea255b6d371}">
+		<property name="assetPath">
+			<value>coconut hit.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>0.34696145124716554</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{2c488fea-5562-474e-86a7-2cd8a1c3cd48}</destination>
+		</relationship>
+	</object>
+</objects>

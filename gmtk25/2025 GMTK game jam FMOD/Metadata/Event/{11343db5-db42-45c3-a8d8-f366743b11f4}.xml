@@ -5,7 +5,7 @@
 			<value>DirtFootsteps</value>
 		</property>
 		<property name="outputFormat">
-			<value>0</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{7d3b143e-d1a5-4e19-8e08-ca316a2a780b}</destination>
@@ -96,6 +96,7 @@
 	<object class="MixerBusEffectChain" id="{af8848ff-18ce-4e49-8626-347b84e8b671}">
 		<relationship name="effects">
 			<destination>{ecdada63-3e6e-4be2-be24-348d86b5bd6f}</destination>
+			<destination>{2f0c5c4a-26a0-42de-b4fc-8429fbd1997e}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{a85a37df-276c-4c15-9555-7e6b340ea2b7}" />
@@ -110,6 +111,7 @@
 	</object>
 	<object class="MixerBusFader" id="{a65837fa-052f-47df-af9d-3dc58afc843b}" />
 	<object class="MixerBusFader" id="{ecdada63-3e6e-4be2-be24-348d86b5bd6f}" />
+	<object class="SpatialiserEffect" id="{2f0c5c4a-26a0-42de-b4fc-8429fbd1997e}" />
 	<object class="SingleSound" id="{8be40ffa-7a52-408d-a055-4dcfbbd8c82f}">
 		<relationship name="audioFile">
 			<destination>{9cae8bea-ec35-45dd-b2d5-43e547912989}</destination>
