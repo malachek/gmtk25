@@ -102,7 +102,7 @@ MonoBehaviour:
   - {fileID: 5151402824549773630}
   StringsBanks:
   - {fileID: -2889990736534702766}
-  cacheTime: 638896572174112689
+  cacheTime: 638896790481894721
   cacheVersion: 131625
 --- !u!114 &1638662616759134778
 MonoBehaviour:
@@ -166,10 +166,10 @@ MonoBehaviour:
   Path: 2025 GMTK game jam FMOD/Build/Desktop/PlayerSFX.bank
   Name: PlayerSFX
   StudioPath: bank:/PlayerSFX
-  lastModified: 638896572174112689
+  lastModified: 638896790481894721
   FileSizes:
   - Name: Desktop
-    Value: 101280
+    Value: 101568
   Exists: 1
 --- !u!114 &5151402824549773630
 MonoBehaviour:
@@ -239,7 +239,7 @@ MonoBehaviour:
   Banks:
   - {fileID: 3026688024717527536}
   IsStream: 0
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1

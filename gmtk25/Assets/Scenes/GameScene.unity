@@ -163,6 +163,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aea7bb2372911524495a0adc0c032215, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <RockStep>k__BackingField:
+    Guid:
+      Data1: 465850158
+      Data2: 1335844778
+      Data3: 1520230536
+      Data4: -663298543
+    Path: event:/Character/Footsteps/RockFootsteps
 --- !u!1 &191231127
 GameObject:
   m_ObjectHideFlags: 0
@@ -225,7 +232,6 @@ GameObject:
   - component: {fileID: 330585545}
   - component: {fileID: 330585547}
   - component: {fileID: 330585548}
-  - component: {fileID: 330585549}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -375,20 +381,52 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
   CustomBlends: {fileID: 0}
---- !u!114 &330585549
+--- !u!1 &373291411
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 373291413}
+  - component: {fileID: 373291412}
+  m_Layer: 0
+  m_Name: FMOD Studio Listener
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &373291412
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 330585543}
+  m_GameObject: {fileID: 373291411}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   nonRigidbodyVelocity: 0
-  attenuationObject: {fileID: 330585543}
+  attenuationObject: {fileID: 373291411}
+--- !u!4 &373291413
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 373291411}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.15, y: 1.32, z: -4.677}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -1353,6 +1391,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6072091035393654923}
+  - component: {fileID: 6072091035393654924}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1613,6 +1652,18 @@ Transform:
   - {fileID: 145145604667774226}
   m_Father: {fileID: 4143754450527950978}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6072091035393654924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 985168410233695243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a69d2936ac5468142bfcba852bfc9122, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &6543251033057399532
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1643,3 +1694,4 @@ SceneRoots:
   - {fileID: 668524700}
   - {fileID: 821344754753740153}
   - {fileID: 1182482973}
+  - {fileID: 373291413}

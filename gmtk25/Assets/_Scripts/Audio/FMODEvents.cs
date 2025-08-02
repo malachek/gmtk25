@@ -6,8 +6,8 @@ using FMODUnity;
 public class FMODEvents : MonoBehaviour
 {
     //examples for header
-    //[field: Header("Torch SFX")]
-    //[field: SerializeField] public EventReference torchGrab { get; private set; }
+    [field: Header("Rock Footstep")]
+    [field: SerializeField] public EventReference RockStep { get; private set; }
 
 
     //Example for future one shot referrences
