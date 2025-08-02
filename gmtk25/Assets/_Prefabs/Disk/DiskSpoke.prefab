@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7492432665889462769}
-  - component: {fileID: 4747265896522354451}
   - component: {fileID: 8969540041490918154}
+  - component: {fileID: 1900228388891260160}
   m_Layer: 0
   m_Name: DiskSpoke
   m_TagString: Untagged
@@ -33,19 +33,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4747265896522354451
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2569442993620648009}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77912721b41048e4096cdbac1ecf7ba3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  segments: []
 --- !u!114 &8969540041490918154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58,4 +45,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bba6482598149e438e5cab76701d75a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectSpawner: {fileID: 1900228388891260160}
   baseSegmentPrefab: {fileID: 2136406687234054489, guid: 41b196ea195a26442b2e0913352aa20a, type: 3}
+  emptySegmentPrefab: {fileID: 0}
+  baseSegmentWeight: 3
+  baseSegmentPrefabVariations: []
+  rampSegmentWeight: 1
+  rampSegmentPrefabVariations: []
+  holeSegmentWeight: 2
+  holeSegmentPrefabVariations: []
+--- !u!114 &1900228388891260160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2569442993620648009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c614f3d3a89bd3d478caa0588ed3b198, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstaclePrefabs:
+  - {fileID: 6884528960412247727, guid: 3628eda8ed3f7f742a52ff3665a3ed73, type: 3}
+  SpawnRate: 0.2
+  ObstacleToEnemyProportion: 0.6
