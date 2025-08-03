@@ -1079,7 +1079,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 4958270347211835054}
-  degreeTolerance: 5
+  xToleranceDg: 5
   jumpTolerance: 0.2
   yTolerance: 2
 --- !u!114 &794062607
@@ -1665,7 +1665,6 @@ MonoBehaviour:
   gravity: -10
   fallMultiplier: 2
   maxJumpTime: 0.1
-  groundY: 0
 --- !u!114 &4958270347211835054
 MonoBehaviour:
   m_ObjectHideFlags: 0

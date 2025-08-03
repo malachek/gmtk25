@@ -8,11 +8,10 @@ public class RotationManager : MonoBehaviour
 {
     [SerializeField] Transform DiskTransform;
 
-    public float velocity { get; private set; }
-    [SerializeField] float acceleration;
-    public float maxVelocity;
+    public float VelocityDg { get; private set; }
+    [SerializeField] float AccelerationDg;
+    public float MaxVelocityDg;
 
-    bool isConstSpeed = false;
 
     [SerializeField] RotationEnum rotationEnum = RotationEnum.CW;
 
@@ -28,65 +27,51 @@ public class RotationManager : MonoBehaviour
         switch(rotationEnum)
         {
             case RotationEnum.None:
-                acceleration = 0; break;
+                AccelerationDg = 0; break;
             case RotationEnum.CW:
                 /*acceleration = acceleration;*/ break;
             case RotationEnum.CCW:
-                acceleration = -acceleration; break;
+                AccelerationDg = -AccelerationDg; break;
         }
     }
     public void Initialize(float height, float _maxVelocity, float _acceleration)
     {
         transform.position += new Vector3(0f, height, 0f);
-        maxVelocity = _maxVelocity;
-        acceleration = _acceleration;   
+        MaxVelocityDg = _maxVelocity;
+        AccelerationDg = _acceleration;   
         if (rotationEnum != RotationEnum.None)
-            StartCoroutine(WindUp(maxVelocity, () => FullSpeed()));
+            StartCoroutine(WindUp(MaxVelocityDg));
     }
 
 
     void Update()
     {
         RotateDisk();
-        RevolveObjects();
     }
 
     private void RotateDisk()
     {
-        DiskTransform.Rotate(Vector3.up * velocity * Time.deltaTime, Space.Self);
-    }
-
-    private void RevolveObjects()
-    {
-
+        DiskTransform.Rotate(Vector3.up * VelocityDg * Time.deltaTime, Space.Self);
     }
 
 
-
-
-    private IEnumerator WindUp(float endVelocity, Action callback)
+    private IEnumerator WindUp(float endVelocity)
     {
-        while(Mathf.Abs(velocity += acceleration * Time.deltaTime) < endVelocity)
+        while(Mathf.Abs(VelocityDg += AccelerationDg * Time.deltaTime) < endVelocity)
         {
             yield return null;
         }
 
-        velocity = endVelocity;
-
-        callback();
+        VelocityDg = endVelocity;
     }
 
-    private void FullSpeed()
-    {
-        isConstSpeed = true;
-    }
     public void RotationInputOverride(bool isCW)
     {
-        bool otherWay = isCW ^ (velocity < 0f);
-        float deltaVelocity = (otherWay ? 4f : 1f) * (isCW ? -1 : 1) * acceleration * Time.deltaTime;
+        bool otherWay = isCW ^ (VelocityDg < 0f);
+        float deltaVelocity = (otherWay ? 4f : 1f) * (isCW ? -1 : 1) * AccelerationDg * Time.deltaTime;
 
-        velocity = Mathf.Clamp(velocity + deltaVelocity, -maxVelocity, maxVelocity);
+        VelocityDg = Mathf.Clamp(VelocityDg + deltaVelocity, -MaxVelocityDg, MaxVelocityDg);
 
-        Debug.Log(deltaVelocity);
+        //Debug.Log(deltaVelocity);
     }
 }

@@ -23,7 +23,7 @@ public class ObjectPooler : MonoBehaviour
         if(!activeObjects.Contains(obj))
         {
             activeObjects.Add(obj);
-            Debug.Log($"Pooled {obj}");
+            //Debug.Log($"Pooled {obj}");
         }
     }
 

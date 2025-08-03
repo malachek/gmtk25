@@ -55,6 +55,10 @@ public class InputManager : MonoBehaviour
         {
             playerMovement.RotationInputOverride(RotateAction.ReadValue<float>() > 0);
         }
+        if (RotateAction.WasReleasedThisFrame())
+        {
+            playerMovement.RotationInputRelease(RotateAction.ReadValue<float>() > 0);
+        }
     }
 
     private void OnRotatePerformed(InputAction.CallbackContext context)

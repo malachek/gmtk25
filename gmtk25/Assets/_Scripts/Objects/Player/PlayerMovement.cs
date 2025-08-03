@@ -12,6 +12,12 @@ public class PlayerMovement : MonoBehaviour
     {
         playerRotation.RotationInputOverride(isCW);
     }
+
+    public void RotationInputRelease(bool releaseCW)
+    {
+        playerRotation.RotationInputRelease(releaseCW);
+    }
+
     public void SetSprint(bool isSprint)
     {
         playerRotation.SetSprint(isSprint);
