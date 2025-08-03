@@ -634,6 +634,7 @@ MonoBehaviour:
   MasterBanks:
   - Master
   Banks:
+  - EnemySFX
   - Evironment
   - PlayerSFX
   BanksToLoad: []
