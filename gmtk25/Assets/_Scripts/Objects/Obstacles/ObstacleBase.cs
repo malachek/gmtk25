@@ -43,6 +43,7 @@ public class ObstacleBase : RingObject
     }
     private void PassedZero()
     {
+        Destroy(gameObject);
         transform.localScale = startScale * Calculator.PowerToScale(++powerLevel);
     }
 }

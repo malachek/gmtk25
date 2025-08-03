@@ -20,6 +20,7 @@ public class PlayerJump : MonoBehaviour
     public bool IsGrounded { get; private set; }
 
     [SerializeField] Animator animator;
+    [SerializeField] RingCollision collision;
 
     void Update()
     {
@@ -71,6 +72,8 @@ public class PlayerJump : MonoBehaviour
         }
         else
         {
+            if (transform.position.y >= groundY + 4f && transform.position.y <= 9f)
+                SetGroundY(groundY + 4f);
             IsGrounded = false;
             animator.Play("Jump");
         }
@@ -107,6 +110,17 @@ public class PlayerJump : MonoBehaviour
             {
                 isJumpHeld = false;
             }
+        }
+    }
+
+    public void Fall(float floorToBeFake)
+    {
+        if(IsGrounded && groundY == floorToBeFake)
+        {
+            //SetGroundY(groundY - 4f);
+            collision.realGroundY = groundY - 4f;
+            IsGrounded = false;
+            animator.Play("Attack");
         }
     }
     public void EndJump()

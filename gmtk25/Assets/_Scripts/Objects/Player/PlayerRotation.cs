@@ -1,4 +1,6 @@
+using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerRotation : RingObject
 {
@@ -22,6 +24,7 @@ public class PlayerRotation : RingObject
     [SerializeField] Animator animator;
 
     [SerializeField] PlayerJump jump;
+    [SerializeField] Disks disks;
 
 
     private bool isSprinting = false;
@@ -35,6 +38,15 @@ public class PlayerRotation : RingObject
 
     private void Update()
     {
+        bool isFloorFake;
+        float floorToBeFake;
+
+        (isFloorFake, floorToBeFake) = disks.IsFloorReal(Degrees);
+        if(!isFloorFake)
+        {
+            jump.Fall(floorToBeFake);
+
+        }
         //Debug.Log($"Velocity: {Velocity} | Acceleration: {_acceleration} | Degrees: {Degrees}");
     }
 
@@ -57,6 +69,10 @@ public class PlayerRotation : RingObject
     }
     private void UpdateRotation()
     {
+        if (Degrees > maxDegrees)
+        {
+            SceneManager.LoadScene(2);
+        }
         if (Degrees > maxDegrees && Velocity > 0f || Degrees + Velocity * Time.deltaTime > maxDegrees)
         {
             Degrees = maxDegrees;
@@ -82,7 +98,7 @@ public class PlayerRotation : RingObject
         transform.rotation = Quaternion.Euler(0, (dg - 90f) % 360f, 0);
         if(dg > maxDegrees)
         {
-            Application.Quit();
+            SceneManager.LoadScene(2);
         }
     }
 
