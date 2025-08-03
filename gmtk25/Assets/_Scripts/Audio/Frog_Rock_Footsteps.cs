@@ -7,15 +7,26 @@ public class Frog_Rock_Footsteps : MonoBehaviour
     private string EventPath = "event:/Character/Footsteps/FrogWetRockFootsteps";
 
 
-    //FOR testing
+
     private void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.J))
-        {
-            AudioManager.instance.PlayOneShot(FMODEvents.instance.FrogRockFootsteps, this.transform.position);
-            Debug.Log("Playing Frog Rock Footstep");
-        }
+
+
+
+
+
+
+
+
+
+        //if (Input.GetKeyDown(KeyCode.J))
+        //{
+        //    AudioManager.instance.PlayOneShot(FMODEvents.instance.FrogRockFootsteps, this.transform.position);
+        //    Debug.Log("Playing Frog Rock Footstep");
+        //}
+
+
     }
     void PlayRockFootstepEvent()
     {

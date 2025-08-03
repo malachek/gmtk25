@@ -24,6 +24,23 @@ public class FMODEvents : MonoBehaviour
     [field: Header("FrogJump")]
     [field: SerializeField] public EventReference FrogJump { get; private set; }
 
+    [field: Header("BubbleShoot")]
+    [field: SerializeField] public EventReference BubbleShoot { get; private set; }
+
+    [field: Header("BubblePop")]
+    [field: SerializeField] public EventReference BubblePop { get; private set; }
+
+    [field: Header("CrabAttack")]
+    [field: SerializeField] public EventReference CrabAttack { get; private set; }
+
+    [field: Header("MonkeyGulp")]
+    [field: SerializeField] public EventReference MonkeyGulp { get; private set; }
+
+    [field: Header("Teleport")]
+    [field: SerializeField] public EventReference Teleport { get; private set; }
+
+    [field: Header("ObstacleBreak")]
+    [field: SerializeField] public EventReference ObstacleBreak { get; private set; }
 
 
     //Example for future one shot referrences
