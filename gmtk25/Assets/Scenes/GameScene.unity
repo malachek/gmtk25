@@ -3000,7 +3000,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e071a41e8e10a8a45b24dee585b920f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 5
+  jumpForce: 6
   gravity: -10
   fallMultiplier: 2
   PlayerSoundSource: {fileID: 985168410233695243}
