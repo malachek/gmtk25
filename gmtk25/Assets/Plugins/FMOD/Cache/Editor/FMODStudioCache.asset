@@ -96,10 +96,10 @@ MonoBehaviour:
   Path: 2025 GMTK game jam FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638897772823535812
+  lastModified: 638898032763753214
   FileSizes:
   - Name: Desktop
-    Value: 1784
+    Value: 1830
   Exists: 1
 --- !u!114 &-2600392522993002077
 MonoBehaviour:
@@ -182,12 +182,13 @@ MonoBehaviour:
   - {fileID: 8906634269541829703}
   - {fileID: 586673227865307485}
   - {fileID: 5809359655133181082}
+  - {fileID: 3295282548843615065}
   EditorParameters: []
   MasterBanks:
   - {fileID: 5151402824549773630}
   StringsBanks:
   - {fileID: -2889990736534702766}
-  cacheTime: 638897772823535812
+  cacheTime: 638898032763753214
   cacheVersion: 131625
 --- !u!114 &586673227865307485
 MonoBehaviour:
@@ -258,10 +259,10 @@ MonoBehaviour:
   Path: 2025 GMTK game jam FMOD/Build/Desktop/Evironment.bank
   Name: Evironment
   StudioPath: bank:/Evironment
-  lastModified: 638897533449817112
+  lastModified: 638898032763645614
   FileSizes:
   - Name: Desktop
-    Value: 75264
+    Value: 1413376
   Exists: 1
 --- !u!114 &1822745289743390098
 MonoBehaviour:
@@ -337,6 +338,33 @@ MonoBehaviour:
   - Name: Desktop
     Value: 142368
   Exists: 1
+--- !u!114 &3295282548843615065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/GameMusic
+  m_EditorClassIdentifier: 
+  Path: event:/Music/GameMusic
+  Guid:
+    Data1: -1554454768
+    Data2: 1326083597
+    Data3: 1553433273
+    Data4: -707747259
+  Banks:
+  - {fileID: 1638662616759134778}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 97600
 --- !u!114 &4410523463748712458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -406,7 +434,7 @@ MonoBehaviour:
   Path: 2025 GMTK game jam FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638897772823510392
+  lastModified: 638898032763732943
   FileSizes:
   - Name: Desktop
     Value: 1486
