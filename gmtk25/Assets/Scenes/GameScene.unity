@@ -393,6 +393,20 @@ MonoBehaviour:
       Data3: 389047964
       Data4: -1299220103
     Path: event:/Character/Footsteps/FrogWetGrassFootsteps
+  <FrogRockFootsteps>k__BackingField:
+    Guid:
+      Data1: 2100562633
+      Data2: 1249627760
+      Data3: -992981582
+      Data4: -460304413
+    Path: event:/Character/Footsteps/FrogWetRockFootsteps
+  <FrogJump>k__BackingField:
+    Guid:
+      Data1: -1734894007
+      Data2: 1260439983
+      Data3: -1664864373
+      Data4: 104879997
+    Path: event:/Character/FrogJump
 --- !u!1 &191231127
 GameObject:
   m_ObjectHideFlags: 0
@@ -2408,7 +2422,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 985168410233695243}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff2b0bebe879ad64ea1404d3cc1ad467, type: 3}
+  m_Script: {fileID: 11500000, guid: 3835bcad0671aad4eb55b7510a721abd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &6543251033057399532

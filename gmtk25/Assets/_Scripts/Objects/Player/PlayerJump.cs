@@ -68,7 +68,7 @@ public class PlayerJump : MonoBehaviour
             yVelocity = jumpForce;
             IsGrounded = false;
             Debug.Log("Start Jump");
-            //AudioManager.instance.PlayOneShot(FMODEvents.instance.FrogCroak, PlayerSoundSource.transform.position);
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.FrogJump, PlayerSoundSource.transform.position);
             return;
         }
     }

@@ -18,6 +18,12 @@ public class FMODEvents : MonoBehaviour
     [field: Header("FrogGrassFst")]
     [field: SerializeField] public EventReference FrogGrassFst { get; private set; }
 
+    [field: Header("FrogRockFootsteps")]
+    [field: SerializeField] public EventReference FrogRockFootsteps { get; private set; }
+
+    [field: Header("FrogJump")]
+    [field: SerializeField] public EventReference FrogJump { get; private set; }
+
 
 
     //Example for future one shot referrences
