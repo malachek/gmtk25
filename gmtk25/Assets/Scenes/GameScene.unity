@@ -326,6 +326,48 @@ MonoBehaviour:
       Data3: -1664864373
       Data4: 104879997
     Path: event:/Character/FrogJump
+  <BubbleShoot>k__BackingField:
+    Guid:
+      Data1: 1940603565
+      Data2: 1322385195
+      Data3: -1175602549
+      Data4: -1800164477
+    Path: event:/Character/Attacks/BubbleAttack
+  <BubblePop>k__BackingField:
+    Guid:
+      Data1: -1299282269
+      Data2: 1189551311
+      Data3: 769781651
+      Data4: 387567444
+    Path: event:/Character/Attacks/BubblePop
+  <CrabAttack>k__BackingField:
+    Guid:
+      Data1: -701596140
+      Data2: 1174369365
+      Data3: 1791674807
+      Data4: -458157566
+    Path: event:/Enemies/CrabAttack
+  <MonkeyGulp>k__BackingField:
+    Guid:
+      Data1: -1092303228
+      Data2: 1128286727
+      Data3: 1327607178
+      Data4: 1967815781
+    Path: event:/Enemies/MonkeyGulp
+  <Teleport>k__BackingField:
+    Guid:
+      Data1: -1022045179
+      Data2: 1121323322
+      Data3: -1792470619
+      Data4: 1562526819
+    Path: event:/Environment/Teleport
+  <ObstacleBreak>k__BackingField:
+    Guid:
+      Data1: 1508237344
+      Data2: 1282533207
+      Data3: -483556713
+      Data4: 902977176
+    Path: event:/Environment/DestroyedObstacle
 --- !u!1 &287353818 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1651017255586270223, guid: 29c58f6732b14b441a60f5dfce47a3e5, type: 3}
@@ -1351,6 +1393,8 @@ GameObject:
   - component: {fileID: 1312822712}
   - component: {fileID: 1312822711}
   - component: {fileID: 1312822714}
+  - component: {fileID: 1312822716}
+  - component: {fileID: 1312822715}
   m_Layer: 7
   m_Name: Sprite
   m_TagString: Player
@@ -1483,6 +1527,30 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.86, y: 2.4226038, z: 2}
   m_Center: {x: 0, y: 1.2113019, z: -0.0000009536742}
+--- !u!114 &1312822715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1312822709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff2b0bebe879ad64ea1404d3cc1ad467, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1312822716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1312822709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3835bcad0671aad4eb55b7510a721abd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1414300568
 GameObject:
   m_ObjectHideFlags: 0

@@ -87,4 +87,18 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0.1
+    functionName: PlayGrassFootstepEvent
+    data: 
+    objectReferenceParameter: {fileID: 11500000, guid: ff2b0bebe879ad64ea1404d3cc1ad467, type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.56666666
+    functionName: PlayRockFootstepEvent
+    data: 
+    objectReferenceParameter: {fileID: 11500000, guid: 3835bcad0671aad4eb55b7510a721abd, type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0

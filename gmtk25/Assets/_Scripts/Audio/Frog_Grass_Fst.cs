@@ -8,16 +8,16 @@ public class Frog_Grass_Fst : MonoBehaviour
 
 
     //FOR testing
-    private void Update()
-    {
+    //private void Update()
+    //{
 
-        if (Input.GetKeyDown(KeyCode.J))
-        {
-            AudioManager.instance.PlayOneShot(FMODEvents.instance.FrogGrassFst, this.transform.position);
-            Debug.Log("Playing Frog Grass Footstep");
-        }
-    }
-    void PlayRockFootstepEvent()
+    //    if (Input.GetKeyDown(KeyCode.J))
+    //    {
+    //        AudioManager.instance.PlayOneShot(FMODEvents.instance.FrogGrassFst, this.transform.position);
+    //        Debug.Log("Playing Frog Grass Footstep");
+    //    }
+    //}
+    void PlayGrassFootstepEvent()
     {
 
 
