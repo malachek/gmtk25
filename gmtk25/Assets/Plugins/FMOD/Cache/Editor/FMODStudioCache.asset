@@ -42,10 +42,10 @@ MonoBehaviour:
   Path: 2025 GMTK game jam FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638896803575657046
+  lastModified: 638897559249700239
   FileSizes:
   - Name: Desktop
-    Value: 1318
+    Value: 1410
   Exists: 1
 --- !u!114 &-283954867780910663
 MonoBehaviour:
@@ -99,12 +99,14 @@ MonoBehaviour:
   - {fileID: -283954867780910663}
   - {fileID: 4949246021211362344}
   - {fileID: 8842511189380988718}
+  - {fileID: 1822745289743390098}
+  - {fileID: 4410523463748712458}
   EditorParameters: []
   MasterBanks:
   - {fileID: 5151402824549773630}
   StringsBanks:
   - {fileID: -2889990736534702766}
-  cacheTime: 638897411219767889
+  cacheTime: 638897559250500542
   cacheVersion: 131625
 --- !u!114 &1638662616759134778
 MonoBehaviour:
@@ -121,11 +123,38 @@ MonoBehaviour:
   Path: 2025 GMTK game jam FMOD/Build/Desktop/Evironment.bank
   Name: Evironment
   StudioPath: bank:/Evironment
-  lastModified: 638897411219400449
+  lastModified: 638897533449817112
   FileSizes:
   - Name: Desktop
-    Value: 66016
+    Value: 75264
   Exists: 1
+--- !u!114 &1822745289743390098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Environment/Teleport
+  m_EditorClassIdentifier: 
+  Path: event:/Environment/Teleport
+  Guid:
+    Data1: -1022045179
+    Data2: 1121323322
+    Data3: -1792470619
+    Data4: 1562526819
+  Banks:
+  - {fileID: 1638662616759134778}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &2403127988671478285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,11 +197,38 @@ MonoBehaviour:
   Path: 2025 GMTK game jam FMOD/Build/Desktop/PlayerSFX.bank
   Name: PlayerSFX
   StudioPath: bank:/PlayerSFX
-  lastModified: 638897411219767889
+  lastModified: 638897559250500542
   FileSizes:
   - Name: Desktop
-    Value: 102752
+    Value: 115744
   Exists: 1
+--- !u!114 &4410523463748712458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character/Footsteps/FrogWetGrassFootsteps
+  m_EditorClassIdentifier: 
+  Path: event:/Character/Footsteps/FrogWetGrassFootsteps
+  Guid:
+    Data1: 1961387063
+    Data2: 1326561933
+    Data3: 389047964
+    Data4: -1299220103
+  Banks:
+  - {fileID: 3026688024717527536}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &4949246021211362344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -215,7 +271,7 @@ MonoBehaviour:
   Path: 2025 GMTK game jam FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638896803575644631
+  lastModified: 638897559249680084
   FileSizes:
   - Name: Desktop
     Value: 1486

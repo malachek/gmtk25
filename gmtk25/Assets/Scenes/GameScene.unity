@@ -386,6 +386,13 @@ MonoBehaviour:
       Data3: -1082581865
       Data4: -2702308
     Path: event:/Character/FrogCroak
+  <FrogGrassFst>k__BackingField:
+    Guid:
+      Data1: 1961387063
+      Data2: 1326561933
+      Data3: 389047964
+      Data4: -1299220103
+    Path: event:/Character/Footsteps/FrogWetGrassFootsteps
 --- !u!1 &191231127
 GameObject:
   m_ObjectHideFlags: 0
@@ -1435,7 +1442,7 @@ Transform:
   m_GameObject: {fileID: 774713585}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.036, y: 0.597, z: -4.51}
+  m_LocalPosition: {x: -0.036, y: 4.631, z: -5.332}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2401,7 +2408,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 985168410233695243}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a69d2936ac5468142bfcba852bfc9122, type: 3}
+  m_Script: {fileID: 11500000, guid: ff2b0bebe879ad64ea1404d3cc1ad467, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &6543251033057399532
