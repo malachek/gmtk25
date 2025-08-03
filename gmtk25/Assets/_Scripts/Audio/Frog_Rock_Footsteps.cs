@@ -8,15 +8,15 @@ public class Frog_Rock_Footsteps : MonoBehaviour
 
 
     //FOR testing
-    private void Update()
-    {
+    //private void Update()
+    //{
 
-        if (Input.GetKeyDown(KeyCode.J))
-        {
-            AudioManager.instance.PlayOneShot(FMODEvents.instance.FrogRockFootsteps, this.transform.position);
-            Debug.Log("Playing Frog Rock Footstep");
-        }
-    }
+    //    if (Input.GetKeyDown(KeyCode.J))
+    //    {
+    //        AudioManager.instance.PlayOneShot(FMODEvents.instance.FrogRockFootsteps, this.transform.position);
+    //        Debug.Log("Playing Frog Rock Footstep");
+    //    }
+    //}
     void PlayRockFootstepEvent()
     {
 
