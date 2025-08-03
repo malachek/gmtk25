@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="Bank" id="{a7a1c096-a199-4b77-97da-c926235997fb}">
+		<property name="name">
+			<value>EnemySFX</value>
+		</property>
+		<relationship name="folder">
+			<destination>{0889e975-9fe9-411c-a06a-58e031710f3b}</destination>
+		</relationship>
+	</object>
+</objects>
