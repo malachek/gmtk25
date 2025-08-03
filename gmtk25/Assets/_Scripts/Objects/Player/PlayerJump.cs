@@ -12,7 +12,7 @@ public class PlayerJump : MonoBehaviour
 
     [Space(10), Header("Jump Details")]
     [SerializeField] float maxJumpTime;
-    public float groundY { get; private set; } = 0f;
+    public float groundY { get; private set; } = 4f;
 
     private float jumpTimeCounter = 0f;
     private bool isJumpHeld = false;
@@ -114,6 +114,12 @@ public class PlayerJump : MonoBehaviour
         isJumpHeld = false;
         //Debug.Log("End Jump");
         return;
+    }
+
+    public void TeleportUpDown(bool isUp)
+    {
+        SetGroundY(groundY + 4);
+        transform.position += new Vector3(0f, 4f, 0f);
     }
 
 }

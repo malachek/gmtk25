@@ -8,6 +8,7 @@ TagManager:
   - PlayerProjectile
   - Enemy
   - EnemyProjectile
+  - TP
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - PlayerProjectile
   - Collision
   - Hostile
-  - 
+  - TP
   - 
   - 
   - 
