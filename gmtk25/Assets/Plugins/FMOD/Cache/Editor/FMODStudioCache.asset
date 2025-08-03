@@ -96,10 +96,30 @@ MonoBehaviour:
   Path: 2025 GMTK game jam FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638897580387538619
+  lastModified: 638897693652619389
   FileSizes:
   - Name: Desktop
-    Value: 1512
+    Value: 1622
+  Exists: 1
+--- !u!114 &-2600392522993002077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/EnemySFX.bank
+  m_EditorClassIdentifier: 
+  Path: 2025 GMTK game jam FMOD/Build/Desktop/EnemySFX.bank
+  Name: EnemySFX
+  StudioPath: bank:/EnemySFX
+  lastModified: 638897693653196371
+  FileSizes:
+  - Name: Desktop
+    Value: 7552
   Exists: 1
 --- !u!114 &-283954867780910663
 MonoBehaviour:
@@ -145,6 +165,7 @@ MonoBehaviour:
   - {fileID: 1638662616759134778}
   - {fileID: 5151402824549773630}
   - {fileID: 3026688024717527536}
+  - {fileID: -2600392522993002077}
   EditorEvents:
   - {fileID: 5391872933693240262}
   - {fileID: 8750452403933939513}
@@ -157,13 +178,41 @@ MonoBehaviour:
   - {fileID: 4410523463748712458}
   - {fileID: -8304031438354477454}
   - {fileID: -7982473594105980815}
+  - {fileID: 884366111808608592}
   EditorParameters: []
   MasterBanks:
   - {fileID: 5151402824549773630}
   StringsBanks:
   - {fileID: -2889990736534702766}
-  cacheTime: 638897585604014505
+  cacheTime: 638897693653196371
   cacheVersion: 131625
+--- !u!114 &884366111808608592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Enemies/CrabAttack
+  m_EditorClassIdentifier: 
+  Path: event:/Enemies/CrabAttack
+  Guid:
+    Data1: -701596140
+    Data2: 1174369365
+    Data3: 1791674807
+    Data4: -458157566
+  Banks:
+  - {fileID: -2600392522993002077}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &1638662616759134778
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -327,7 +376,7 @@ MonoBehaviour:
   Path: 2025 GMTK game jam FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638897580387516082
+  lastModified: 638897693652589093
   FileSizes:
   - Name: Desktop
     Value: 1486
