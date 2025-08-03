@@ -20,7 +20,7 @@ public class RingObject : MonoBehaviour
     }
 
 
-    public void Initialize(float spawnDegree, float spawnHeight)
+    public void Initialize()
     {
         if (gameObject.transform.parent != null)
             rDistance = gameObject.transform.parent.localPosition.x;

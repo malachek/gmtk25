@@ -23,7 +23,7 @@ public class PlayerRotation : RingObject
     protected override void Awake()
     {
         base.Awake();
-        Initialize(180f, 0f);
+        Initialize();
         maxVelocity = maxWalkVelocity;
     }
 
@@ -36,12 +36,18 @@ public class PlayerRotation : RingObject
 
     public void PushBack(float additionalPushback)
     {
+        //Debug.Log($"Being pushed back by {additionalPushback}, surmounting to {Degrees + (pushBackVelocity - Velocity) * Time.deltaTime + additionalPushback}");
         RotatePlayerTo(Degrees + (pushBackVelocity - Velocity) * Time.deltaTime + additionalPushback);
 
         //if (Velocity > 0f)
         //{
         //    Velocity = 0f;
         //}
+    }
+
+    public void PushTo(float pushTo)
+    {
+        RotatePlayerTo(pushTo - Velocity * Time.deltaTime);
     }
     private void UpdateRotation()
     {
@@ -66,6 +72,10 @@ public class PlayerRotation : RingObject
         //transform.Rotate(Vector3.up * Velocity * Time.deltaTime, Space.Self);
         Degrees = dg;
         transform.rotation = Quaternion.Euler(0, (dg - 90f) % 360f, 0);
+        if(dg > maxDegrees)
+        {
+            Application.Quit();
+        }
     }
 
     public void SetSprint(bool isSprint)
@@ -83,5 +93,12 @@ public class PlayerRotation : RingObject
 
         Velocity = Mathf.Clamp(Velocity + deltaVelocity, -maxVelocity, maxVelocity);
         UpdateRotation();
+    }
+
+    public void RotationInputRelease(bool releaseCW)
+    {
+        if (releaseCW && Velocity > 0f) Velocity = 0f;
+        else if (!releaseCW && Velocity < 0f) Velocity = 0f;
+        else Velocity = 0f;
     }
 }

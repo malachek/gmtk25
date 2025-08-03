@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5693100377823633551}
   - component: {fileID: 7794833090173161428}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Obstacle
-  m_TagString: Untagged
+  m_TagString: Collision
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -62,9 +62,9 @@ GameObject:
   - component: {fileID: 653453597319530243}
   - component: {fileID: 1393294452290168470}
   - component: {fileID: 2708729545096989189}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Collision
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -167,9 +167,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2505128077068171398}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ObstacleSpoke
-  m_TagString: Untagged
+  m_TagString: Collision
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -199,9 +199,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1162934424872091005}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: 3DObstacleBase 1
-  m_TagString: Untagged
+  m_TagString: Collision
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

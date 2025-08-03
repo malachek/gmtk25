@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4723112884172813032}
   m_Layer: 0
   m_Name: Sprite
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -112,7 +112,7 @@ GameObject:
   - component: {fileID: 7794833090173161428}
   m_Layer: 0
   m_Name: Obstacle
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -145,6 +145,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49c3e28a95a30ae468e72686f5806a74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  YPos: 0
+  initXWidth: 0
+  initYHeight: 0
+  rDistance: 0
+  degreeXWidth: 0
 --- !u!1 &2487496315324248537
 GameObject:
   m_ObjectHideFlags: 0
@@ -156,7 +161,7 @@ GameObject:
   - component: {fileID: 2505128077068171398}
   m_Layer: 0
   m_Name: ObstacleSpoke
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -188,7 +193,7 @@ GameObject:
   - component: {fileID: 1162934424872091005}
   m_Layer: 0
   m_Name: 2DEnemyBase
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

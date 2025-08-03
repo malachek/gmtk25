@@ -11,6 +11,7 @@ public class InputManager : MonoBehaviour
     InputAction RotateAction;
     InputAction JumpAction;
     InputAction SprintAction;
+    InputAction AttackAction;
 
     [Space(10)]
     [SerializeField] RotationManager rotationManager;
@@ -23,10 +24,12 @@ public class InputManager : MonoBehaviour
         RotateAction = playerMap.FindAction("Rotate");
         JumpAction = playerMap.FindAction("Jump");
         SprintAction = playerMap.FindAction("Sprint");
+        AttackAction = playerMap.FindAction("Attack");
 
         RotateAction.Enable();
         JumpAction.Enable();
         SprintAction.Enable();
+        AttackAction.Enable();
 
         JumpAction.started += OnJumpStarted;
         JumpAction.performed += OnJumpPerformed;
@@ -40,6 +43,7 @@ public class InputManager : MonoBehaviour
         RotateAction.Disable();
         JumpAction.Disable();
         SprintAction.Disable();
+        AttackAction.Disable();
 
         JumpAction.started -= OnJumpStarted;
         JumpAction.performed -= OnJumpPerformed;
@@ -54,6 +58,14 @@ public class InputManager : MonoBehaviour
         if (RotateAction.IsPressed())
         {
             playerMovement.RotationInputOverride(RotateAction.ReadValue<float>() > 0);
+        }
+        if (RotateAction.WasReleasedThisFrame())
+        {
+            playerMovement.RotationInputRelease(RotateAction.ReadValue<float>() > 0);
+        }
+        if (AttackAction.WasPressedThisFrame())
+        {
+            playerMovement.Attack(AttackAction.ReadValue<float>() > 0);
         }
     }
 
