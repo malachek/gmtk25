@@ -1966,6 +1966,7 @@ MonoBehaviour:
   sprintMultiplier: 1.5
   maxDegrees: 350
   minDegrees: 10
+  bilboard: {fileID: 1312822712}
 --- !u!114 &4958270347211835055
 MonoBehaviour:
   m_ObjectHideFlags: 0
