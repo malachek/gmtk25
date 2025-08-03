@@ -5,6 +5,19 @@ public class Projectile : ObstacleBase
     [SerializeField] float VelocityDg;
     [SerializeField] Transform rootTransform;
 
+
+    [SerializeField] BoxCollider col;
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Awake()
+    {
+        col.enabled = false;
+        Invoke("EnableCol", 1f);
+    }
+
+    private void EnableCol()
+    {
+        col.enabled = true;
+    }
     public void Initialize(float _dg, float _yPos, bool _isCW)
     {
         base.Initialize();

@@ -2,15 +2,12 @@ using UnityEngine;
 
 public class PlayerHit : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void OnTriggerEnter(Collider other)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (other.CompareTag("PlayerProjectile"))
+        {
+            transform.parent.parent.parent.GetComponent<PlayerRotation>().PushBack(40f);
+            Destroy(other.gameObject);
+        }
     }
 }

@@ -2,12 +2,8 @@ using UnityEngine;
 
 public class Enemy : ObstacleBase
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
 
+    
     // Update is called once per frame
     void Update()
     {
@@ -19,9 +15,10 @@ public class Enemy : ObstacleBase
         if(other.CompareTag("PlayerProjectile"))
         {
             transform.localScale = startScale * Calculator.PowerToScale(--powerLevel);
-            Destroy(other);
+            Destroy(other.gameObject.transform.parent);
+
             if (powerLevel <= 0)
-                Destroy(gameObject);
+                Destroy(gameObject.transform.parent);
         }
 
         if(other.CompareTag("Player"))
