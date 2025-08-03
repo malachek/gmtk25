@@ -19,6 +19,8 @@ public class Enemy : ObstacleBase
 
             if (powerLevel <= 0)
                 Destroy(gameObject);
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.BubblePop, this.transform.position);
+
         }
 
         if(other.CompareTag("Player"))

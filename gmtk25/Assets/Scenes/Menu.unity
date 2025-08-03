@@ -726,7 +726,7 @@ MonoBehaviour:
       Data4: 866240144
     Path: event:/Environment/UI Click
   Event: 
-  EventPlayTrigger: 19
+  EventPlayTrigger: 20
   EventStopTrigger: 0
   AllowFadeout: 1
   TriggerOnce: 0
@@ -1001,7 +1001,7 @@ MonoBehaviour:
       Data4: 866240144
     Path: event:/Environment/UI Click
   Event: 
-  EventPlayTrigger: 19
+  EventPlayTrigger: 20
   EventStopTrigger: 0
   AllowFadeout: 1
   TriggerOnce: 0
