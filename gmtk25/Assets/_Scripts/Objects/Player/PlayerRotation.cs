@@ -1,4 +1,6 @@
+using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerRotation : RingObject
 {
@@ -67,6 +69,10 @@ public class PlayerRotation : RingObject
     }
     private void UpdateRotation()
     {
+        if (Degrees > maxDegrees)
+        {
+            SceneManager.LoadScene(2);
+        }
         if (Degrees > maxDegrees && Velocity > 0f || Degrees + Velocity * Time.deltaTime > maxDegrees)
         {
             Degrees = maxDegrees;
@@ -92,7 +98,7 @@ public class PlayerRotation : RingObject
         transform.rotation = Quaternion.Euler(0, (dg - 90f) % 360f, 0);
         if(dg > maxDegrees)
         {
-            Application.Quit();
+            SceneManager.LoadScene(2);
         }
     }
 
