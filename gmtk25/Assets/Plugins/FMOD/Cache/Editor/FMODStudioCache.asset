@@ -231,7 +231,7 @@ MonoBehaviour:
   Path: 2025 GMTK game jam FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638898114046078302
+  lastModified: 638898098788014623
   FileSizes:
   - Name: Desktop
     Value: 1916
@@ -332,7 +332,7 @@ MonoBehaviour:
   - {fileID: 5151402824549773630}
   StringsBanks:
   - {fileID: -2889990736534702766}
-  cacheTime: 638898114046713750
+  cacheTime: 638898100707730255
   cacheVersion: 131625
 --- !u!114 &1638662616759134778
 MonoBehaviour:
@@ -349,7 +349,7 @@ MonoBehaviour:
   Path: 2025 GMTK game jam FMOD/Build/Desktop/Evironment.bank
   Name: Evironment
   StudioPath: bank:/Evironment
-  lastModified: 638898114045972879
+  lastModified: 638898100707730255
   FileSizes:
   - Name: Desktop
     Value: 1418592
@@ -396,7 +396,7 @@ MonoBehaviour:
   Path: 2025 GMTK game jam FMOD/Build/Desktop/PlayerSFX.bank
   Name: PlayerSFX
   StudioPath: bank:/PlayerSFX
-  lastModified: 638898114046713750
+  lastModified: 638897735875719197
   FileSizes:
   - Name: Desktop
     Value: 142368
@@ -443,7 +443,7 @@ MonoBehaviour:
   Path: 2025 GMTK game jam FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638898114046063047
+  lastModified: 638898098787994347
   FileSizes:
   - Name: Desktop
     Value: 1486
@@ -517,7 +517,7 @@ MonoBehaviour:
   Path: 2025 GMTK game jam FMOD/Build/Desktop/EnemySFX.bank
   Name: EnemySFX
   StudioPath: bank:/EnemySFX
-  lastModified: 638898114030939722
+  lastModified: 638898081184719548
   FileSizes:
   - Name: Desktop
     Value: 16064
