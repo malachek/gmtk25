@@ -10,7 +10,7 @@ public class RingCollision : MonoBehaviour
 
     [SerializeField] float xToleranceDg = 5f;
     [SerializeField] float jumpTolerance = .2f;
-    [SerializeField] float yTolerance = 2f;
+    [SerializeField] float yFloorTolerance = 2f;
 
 
     private float playerToObjectXDistance;
@@ -75,7 +75,7 @@ public class RingCollision : MonoBehaviour
 
     private bool IsSameFloor(RingObject obj1, RingObject obj2)
     {
-        return Mathf.Abs(obj1.YPos - obj2.YPos) < yTolerance;
+        return Mathf.Abs(obj1.YPos - obj2.YPos) < yFloorTolerance;
     }
 
     private bool IsPlayerYInObject(RingObject obj1, RingObject obj2)
