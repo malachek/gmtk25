@@ -8,6 +8,8 @@ public class PlayerJump : MonoBehaviour
     [SerializeField] float gravity;
     [SerializeField] float fallMultiplier;
 
+    [SerializeField] public GameObject PlayerSoundSource;
+
     [Space(10), Header("Jump Details")]
     [SerializeField] float maxJumpTime;
     [SerializeField] float groundY = 0f;
@@ -66,6 +68,7 @@ public class PlayerJump : MonoBehaviour
             yVelocity = jumpForce;
             IsGrounded = false;
             Debug.Log("Start Jump");
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.FrogJump, PlayerSoundSource.transform.position);
             return;
         }
     }
