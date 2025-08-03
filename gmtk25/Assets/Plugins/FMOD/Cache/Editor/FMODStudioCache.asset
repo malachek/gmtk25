@@ -96,10 +96,10 @@ MonoBehaviour:
   Path: 2025 GMTK game jam FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638897735587562199
+  lastModified: 638897772823535812
   FileSizes:
   - Name: Desktop
-    Value: 1730
+    Value: 1784
   Exists: 1
 --- !u!114 &-2600392522993002077
 MonoBehaviour:
@@ -116,10 +116,10 @@ MonoBehaviour:
   Path: 2025 GMTK game jam FMOD/Build/Desktop/EnemySFX.bank
   Name: EnemySFX
   StudioPath: bank:/EnemySFX
-  lastModified: 638897693653196371
+  lastModified: 638897772823347338
   FileSizes:
   - Name: Desktop
-    Value: 7552
+    Value: 16064
   Exists: 1
 --- !u!114 &-283954867780910663
 MonoBehaviour:
@@ -181,12 +181,13 @@ MonoBehaviour:
   - {fileID: 884366111808608592}
   - {fileID: 8906634269541829703}
   - {fileID: 586673227865307485}
+  - {fileID: 5809359655133181082}
   EditorParameters: []
   MasterBanks:
   - {fileID: 5151402824549773630}
   StringsBanks:
   - {fileID: -2889990736534702766}
-  cacheTime: 638897735875719197
+  cacheTime: 638897772823535812
   cacheVersion: 131625
 --- !u!114 &586673227865307485
 MonoBehaviour:
@@ -405,7 +406,7 @@ MonoBehaviour:
   Path: 2025 GMTK game jam FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638897735587540156
+  lastModified: 638897772823510392
   FileSizes:
   - Name: Desktop
     Value: 1486
@@ -432,6 +433,33 @@ MonoBehaviour:
   - {fileID: 1638662616759134778}
   IsStream: 0
   Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &5809359655133181082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Enemies/MonkeyGulp
+  m_EditorClassIdentifier: 
+  Path: event:/Enemies/MonkeyGulp
+  Guid:
+    Data1: -1092303228
+    Data2: 1128286727
+    Data3: 1327607178
+    Data4: 1967815781
+  Banks:
+  - {fileID: -2600392522993002077}
+  IsStream: 0
+  Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
