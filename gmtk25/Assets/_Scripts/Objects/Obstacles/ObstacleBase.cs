@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class ObstacleBase : RingObject
 {
-    private Vector3 startScale;
+    protected Vector3 startScale;
     private bool hasPassedZero = false;
 
-    private int powerLevel = 1;
+    protected int powerLevel = 3;
 
     protected override void Awake()
     {
@@ -41,9 +41,8 @@ public class ObstacleBase : RingObject
             hasPassedZero = false;
         }
     }
-    private void PassedZero()
+    protected virtual void PassedZero()
     {
         Destroy(gameObject);
-        transform.localScale = startScale * Calculator.PowerToScale(++powerLevel);
     }
 }

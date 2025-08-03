@@ -71,5 +71,6 @@ MonoBehaviour:
   - {fileID: 6884528960412247727, guid: 437a53423cf26ee4a9e1931fc7795586, type: 3}
   - {fileID: 6884528960412247727, guid: e59c9b0a187259a4787046e810448dc8, type: 3}
   - {fileID: 6884528960412247727, guid: e59c9b0a187259a4787046e810448dc8, type: 3}
+  - {fileID: 6884528960412247727, guid: 29c58f6732b14b441a60f5dfce47a3e5, type: 3}
   SpawnRate: 0.2
   ObstacleToEnemyProportion: 0.6

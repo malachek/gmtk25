@@ -35,7 +35,7 @@ public class Disks : MonoBehaviour
 
     public (bool,float) IsFloorReal(float dg)
     {
-        Debug.Log("degree" + dg);
+        //Debug.Log("degree" + dg);
         float Degree = (dg - midMgr.transform.rotation.eulerAngles.y + 22.5f + 360f) % 360f;
         if(midMgr.IsDiskAtDgFake(Degree)) return (false, 4f);
         if (highMgr.IsDiskAtDgFake(Degree)) return (false, 8f);
