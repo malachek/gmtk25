@@ -95,7 +95,7 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.56666666
+  - time: 0.55
     functionName: PlayRockFootstepEvent
     data: 
     objectReferenceParameter: {fileID: 11500000, guid: 3835bcad0671aad4eb55b7510a721abd, type: 3}
