@@ -368,6 +368,13 @@ MonoBehaviour:
       Data3: -483556713
       Data4: 902977176
     Path: event:/Environment/DestroyedObstacle
+  <UIClick>k__BackingField:
+    Guid:
+      Data1: -468475895
+      Data2: 1301909745
+      Data3: 1224361091
+      Data4: 866240144
+    Path: event:/Environment/UI Click
 --- !u!1 &287353818 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1651017255586270223, guid: 29c58f6732b14b441a60f5dfce47a3e5, type: 3}

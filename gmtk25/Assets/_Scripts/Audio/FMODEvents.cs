@@ -42,6 +42,9 @@ public class FMODEvents : MonoBehaviour
     [field: Header("ObstacleBreak")]
     [field: SerializeField] public EventReference ObstacleBreak { get; private set; }
 
+    [field: Header("UIClick")]
+    [field: SerializeField] public EventReference UIClick { get; private set; }
+
 
     //Example for future one shot referrences
     //AudioManager.instance.PlayOneShot(FMODEvents.instance.sonarPing, this.transform.position);
