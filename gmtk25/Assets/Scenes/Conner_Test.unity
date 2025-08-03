@@ -506,6 +506,55 @@ MonoBehaviour:
       Data3: 0
       Data4: 0
     Path: 
+  <BubbleShoot>k__BackingField:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  <BubblePop>k__BackingField:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  <CrabAttack>k__BackingField:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  <MonkeyGulp>k__BackingField:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  <Teleport>k__BackingField:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  <ObstacleBreak>k__BackingField:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  <UIClick>k__BackingField:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!4 &142593464 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 49b71cc8e8e50fe4aabf43841e193845, type: 3}
@@ -2336,6 +2385,7 @@ MonoBehaviour:
   xToleranceDg: 5
   jumpTolerance: 0.2
   yFloorTolerance: 2
+  realGroundY: 4
 --- !u!114 &794062607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5923,6 +5973,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wall
       objectReference: {fileID: 0}
+    - target: {fileID: 6192933403091675198, guid: d6e509aee44fef44abd370e7f5f51475, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6068,6 +6122,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerRotation: {fileID: 4958270347211835054}
   playerJump: {fileID: 4958270347211835053}
+  playerAttack: {fileID: 0}
 --- !u!114 &4958270347211835053
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6085,6 +6140,8 @@ MonoBehaviour:
   fallMultiplier: 2
   PlayerSoundSource: {fileID: 0}
   maxJumpTime: 0.1
+  animator: {fileID: 0}
+  collision: {fileID: 0}
 --- !u!114 &4958270347211835054
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6107,6 +6164,10 @@ MonoBehaviour:
   sprintMultiplier: 1.5
   maxDegrees: 350
   minDegrees: 10
+  bilboard: {fileID: 0}
+  animator: {fileID: 0}
+  jump: {fileID: 0}
+  disks: {fileID: 0}
 --- !u!1 &5034001268467641501 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5034001266986536474, guid: 129daa1bda1628a41a5036c76b13eb40, type: 3}
