@@ -10,19 +10,11 @@ public class DiskSegmentManager : MonoBehaviour
     private Segment[] segments;
     private int currentSegment;
 
-
     [SerializeField] GameObject baseSegmentPrefab;
-
     [SerializeField] GameObject emptySegmentPrefab;
 
-    [SerializeField] float baseSegmentWeight = 3f;
-    [SerializeField] GameObject[] baseSegmentPrefabVariations;
-
-    [SerializeField] float rampSegmentWeight = 1f;
-    [SerializeField] GameObject[] rampSegmentPrefabVariations;
-
-    [SerializeField] float holeSegmentWeight = 2f;
-    [SerializeField] GameObject[] holeSegmentPrefabVariations;
+    [SerializeField, Range(0f, 1f)] float segmentEmptyChance = .2f; 
+    private bool prevSegmentEmpty = false;
 
     private float spawnHeightOffset;
 
@@ -34,14 +26,6 @@ public class DiskSegmentManager : MonoBehaviour
         segments = new Segment[SEGMENT_COUNT];
         SpawnAndInitializeSegments();
         currentSegment = SEGMENT_COUNT - 1;
-    }
-
-    private void Start()
-    {
-        if(!baseSegmentPrefabVariations.Contains(baseSegmentPrefab))
-        {
-            baseSegmentPrefabVariations.Append(baseSegmentPrefab);
-        }
     }
 
     private void Update()
@@ -68,24 +52,14 @@ public class DiskSegmentManager : MonoBehaviour
 
     private GameObject GetRandomNextSegment()
     {
-        int totalVariations = baseSegmentPrefabVariations.Length + rampSegmentPrefabVariations.Length + holeSegmentPrefabVariations.Length;
-        if (totalVariations <= 1)
+        if (prevSegmentEmpty || Random.Range(0f, 1f) < segmentEmptyChance)
+        {
+            prevSegmentEmpty = false;
             return baseSegmentPrefab;
-
-        float nextTypeWeight = Random.Range(0, baseSegmentWeight + rampSegmentWeight + holeSegmentWeight);
-
-        if (nextTypeWeight > baseSegmentWeight + rampSegmentWeight)
-        {
-            return holeSegmentPrefabVariations[Random.Range(0, holeSegmentPrefabVariations.Length - 1)];
         }
-        else if (nextTypeWeight > baseSegmentWeight)
-        {
-            return rampSegmentPrefabVariations[Random.Range(0, rampSegmentPrefabVariations.Length - 1)];
-        }
-        else
-        {
-            return baseSegmentPrefabVariations[Random.Range(0, baseSegmentPrefabVariations.Length - 1)];
-        }
+        
+        prevSegmentEmpty = true;
+        return emptySegmentPrefab;
     }
 
     private void SpawnAndInitializeSegments()

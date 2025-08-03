@@ -10,16 +10,9 @@ public class RingCollision : MonoBehaviour
     [SerializeField] float jumpTolerance = .2f;
     [SerializeField] float yTolerance = 2f;
 
-    [SerializeField] RotationManager rotationManager;
-
 
     private float currOverlap;
 
-
-    private void Awake()
-    {
-        player.SetPushBack(rotationManager.velocity);
-    }
 
     void Update()
     {
