@@ -8,5 +8,6 @@ public class PlayerAttack : MonoBehaviour
     {
         Projectile projectile = Instantiate(projectilePrefab).transform.GetChild(0).GetComponentInChildren<Projectile>();
         projectile.Initialize(Dg, transform.position.y, isCW);
+        //AudioManager.instance.PlayOneShot(FMODEvents.instance.BubbleShoot, this.transform.position);
     }
 }
