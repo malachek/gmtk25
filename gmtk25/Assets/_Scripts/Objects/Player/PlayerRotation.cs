@@ -36,12 +36,12 @@ public class PlayerRotation : RingObject
 
     public void PushBack(float additionalPushback)
     {
-        RotatePlayerTo(Degrees + pushBackVelocity * Time.deltaTime + additionalPushback);
+        RotatePlayerTo(Degrees + (pushBackVelocity - Velocity) * Time.deltaTime + additionalPushback);
 
-        if (Velocity > 0f)
-        {
-            Velocity = 0f;
-        }
+        //if (Velocity > 0f)
+        //{
+        //    Velocity = 0f;
+        //}
     }
     private void UpdateRotation()
     {

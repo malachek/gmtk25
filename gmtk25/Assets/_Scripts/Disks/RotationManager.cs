@@ -10,11 +10,11 @@ public class RotationManager : MonoBehaviour
 
     public float velocity { get; private set; }
     [SerializeField] float acceleration;
-    [SerializeField] float maxVelocity;
+    public float maxVelocity;
 
     bool isConstSpeed = false;
 
-    [SerializeField] RotationEnum rotationEnum;
+    [SerializeField] RotationEnum rotationEnum = RotationEnum.CW;
 
     public enum RotationEnum
     {
@@ -23,7 +23,7 @@ public class RotationManager : MonoBehaviour
         CCW = 2
     }
 
-    private void Awake()
+    private void OnEnable()
     {
         switch(rotationEnum)
         {
@@ -35,11 +35,15 @@ public class RotationManager : MonoBehaviour
                 acceleration = -acceleration; break;
         }
     }
-    void Start()
+    public void Initialize(float height, float _maxVelocity, float _acceleration)
     {
-        if(rotationEnum != RotationEnum.None) 
-            StartCoroutine(WindUp( maxVelocity, () => FullSpeed()));
+        transform.position += new Vector3(0f, height, 0f);
+        maxVelocity = _maxVelocity;
+        acceleration = _acceleration;   
+        if (rotationEnum != RotationEnum.None)
+            StartCoroutine(WindUp(maxVelocity, () => FullSpeed()));
     }
+
 
     void Update()
     {
