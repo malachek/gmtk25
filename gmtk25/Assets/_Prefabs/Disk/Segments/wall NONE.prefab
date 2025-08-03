@@ -20,10 +20,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1179391957909341169, guid: d6e509aee44fef44abd370e7f5f51475, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5855325691357989519, guid: d6e509aee44fef44abd370e7f5f51475, type: 3}
       propertyPath: m_Name
       value: wall Variant

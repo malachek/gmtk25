@@ -22,6 +22,7 @@ public class PlayerRotation : RingObject
     [SerializeField] Animator animator;
 
     [SerializeField] PlayerJump jump;
+    [SerializeField] Disks disks;
 
 
     private bool isSprinting = false;
@@ -35,6 +36,15 @@ public class PlayerRotation : RingObject
 
     private void Update()
     {
+        bool isFloorFake;
+        float floorToBeFake;
+
+        (isFloorFake, floorToBeFake) = disks.IsFloorReal(Degrees);
+        if(!isFloorFake)
+        {
+            jump.Fall(floorToBeFake);
+
+        }
         //Debug.Log($"Velocity: {Velocity} | Acceleration: {_acceleration} | Degrees: {Degrees}");
     }
 

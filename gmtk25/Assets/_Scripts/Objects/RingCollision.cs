@@ -20,7 +20,7 @@ public class RingCollision : MonoBehaviour
     private bool PlayerYOverlap;
 
     private float tempGroundY = 0f;
-    private float realGroundY = 4f;
+    public float realGroundY = 4f;
 
     private bool playerAboveObject = false;
 

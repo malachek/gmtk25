@@ -10,8 +10,12 @@ public class DiskSegmentManager : MonoBehaviour
     private Segment[] segments;
     private int currentSegment;
 
-    [SerializeField] GameObject baseSegmentPrefab;
+    [SerializeField] GameObject[] baseSegmentPrefabs;
     [SerializeField] GameObject emptySegmentPrefab;
+    [SerializeField] GameObject wallSegmentPrefab;
+
+    private bool[] realVsFake;
+
 
     [SerializeField, Range(0f, 1f)] float segmentEmptyChance = .2f; 
     private bool prevSegmentEmpty = false;
@@ -20,12 +24,18 @@ public class DiskSegmentManager : MonoBehaviour
 
     bool hasSpawnedCurrentSegment = false;
 
+
     private void OnEnable()
     {
         CalculateSpawnHeightOffset();
-        segments = new Segment[SEGMENT_COUNT];
         SpawnAndInitializeSegments();
         currentSegment = SEGMENT_COUNT - 1;
+    }
+
+    public bool IsDiskAtDgFake(float Dg)
+    {
+        Debug.Log(Mathf.FloorToInt(Dg / 45));
+        return !realVsFake[Mathf.FloorToInt(Dg / 45)];
     }
 
     private void Update()
@@ -46,30 +56,39 @@ public class DiskSegmentManager : MonoBehaviour
         if (hasSpawnedCurrentSegment) return;
 
         hasSpawnedCurrentSegment = true;
-        GameObject newSegment = GetRandomNextSegment();
+        GameObject newSegment = GetRandomNextSegment(outSegmentIndex);
         ReplaceSegment(newSegment, outSegmentIndex);
     }
 
-    private GameObject GetRandomNextSegment()
+    private GameObject GetRandomNextSegment(int outSegmentIndex)
     {
-        if (prevSegmentEmpty || Random.Range(0f, 1f) < segmentEmptyChance)
+        if (transform.position.y >= 2f && !prevSegmentEmpty && Random.Range(0f, 1f) < segmentEmptyChance)
         {
-            prevSegmentEmpty = false;
-            return baseSegmentPrefab;
+            prevSegmentEmpty = true;
+            realVsFake[outSegmentIndex] = false;
+            return (Random.Range(0f,1f) < .5f) ? emptySegmentPrefab : wallSegmentPrefab;
         }
-        
-        prevSegmentEmpty = true;
-        return emptySegmentPrefab;
+
+
+        prevSegmentEmpty = false;
+        realVsFake[outSegmentIndex] = true;
+
+        return baseSegmentPrefabs[Random.Range(0,2)];
     }
 
     private void SpawnAndInitializeSegments()
     {
+        segments = new Segment[SEGMENT_COUNT];
+
+        realVsFake = new bool[SEGMENT_COUNT];
+
         for (int i = 0; i < SEGMENT_COUNT; ++i)
         {
             Quaternion rotation = Quaternion.Euler(0f, 360f * i / SEGMENT_COUNT, 0f);
             Vector3 position = transform.position - new Vector3(0f, spawnHeightOffset, 0f);
 
-            segments[i] = Instantiate(baseSegmentPrefab, position, rotation, transform).GetComponent<Segment>();
+            segments[i] = Instantiate(baseSegmentPrefabs[Random.Range(0,2)], position, rotation, transform).GetComponent<Segment>();
+            realVsFake[i] = true;
         }
     }
 
@@ -79,7 +98,9 @@ public class DiskSegmentManager : MonoBehaviour
         Vector3 position = segments[index].transform.position;
 
         Destroy(segments[index].gameObject);
-        segments[index] = Instantiate(baseSegmentPrefab, position, rotation, transform).GetComponent<Segment>();
+
+
+        segments[index] = Instantiate(prefab, position, rotation, transform).GetComponent<Segment>();
         objectSpawner.SpawnPlatformObject(transform.parent, rotation.y, position.y);
     }
 
@@ -89,7 +110,7 @@ public class DiskSegmentManager : MonoBehaviour
     /// </summary>
     private void CalculateSpawnHeightOffset()
     {
-        GameObject temp = Instantiate(baseSegmentPrefab);
+        GameObject temp = Instantiate(baseSegmentPrefabs[0]);
         spawnHeightOffset = temp.GetComponent<Renderer>()?.bounds.max.y ?? 1f;
         Destroy(temp);
     }
