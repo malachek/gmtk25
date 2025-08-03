@@ -32,7 +32,7 @@ public class ObstacleBase : RingObject
         if (!hasPassedZero && transform.position.x >= 0f && transform.position.z > 0f)
         {
             hasPassedZero = true;
-            Debug.Log("zero");
+            //Debug.Log("zero");
             PassedZero();
         }
 

@@ -8,9 +8,11 @@ public class PlayerJump : MonoBehaviour
     [SerializeField] float gravity;
     [SerializeField] float fallMultiplier;
 
+    [SerializeField] public GameObject PlayerSoundSource;
+
     [Space(10), Header("Jump Details")]
     [SerializeField] float maxJumpTime;
-    [SerializeField] float groundY = 0f;
+    public float groundY { get; private set; } = 0f;
 
     private float jumpTimeCounter = 0f;
     private bool isJumpHeld = false;
@@ -19,7 +21,7 @@ public class PlayerJump : MonoBehaviour
 
     void Update()
     {
-        Gravity();    
+        Gravity();
         MoveY();
         GroundClamp();
     }
@@ -31,6 +33,17 @@ public class PlayerJump : MonoBehaviour
             bool isFalling = !isJumpHeld || yVelocity < 0f;
             yVelocity += gravity * Time.deltaTime * (isFalling ? fallMultiplier : 1f);
         }
+    }
+
+    public void SetGroundY(float _groundY)
+    {
+        if (_groundY == groundY)
+            return;
+
+        if (_groundY > groundY)
+            IsGrounded = false;
+
+        groundY = _groundY;
     }
 
     private void MoveY()
@@ -65,7 +78,9 @@ public class PlayerJump : MonoBehaviour
             jumpTimeCounter = maxJumpTime;
             yVelocity = jumpForce;
             IsGrounded = false;
+
             Debug.Log("Start Jump");
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.FrogJump, PlayerSoundSource.transform.position);
             return;
         }
     }
@@ -80,7 +95,7 @@ public class PlayerJump : MonoBehaviour
                     yVelocity = jumpForce;
                 }
                 jumpTimeCounter -= Time.deltaTime;
-                Debug.Log("Continue Jump");
+                //Debug.Log("Continue Jump");
             }
             else
             {
@@ -91,7 +106,7 @@ public class PlayerJump : MonoBehaviour
     public void EndJump()
     {
         isJumpHeld = false;
-        Debug.Log("End Jump");
+        //Debug.Log("End Jump");
         return;
     }
 
