@@ -46,8 +46,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectSpawner: {fileID: 1900228388891260160}
-  baseSegmentPrefab: {fileID: 2136406687234054489, guid: 41b196ea195a26442b2e0913352aa20a, type: 3}
-  emptySegmentPrefab: {fileID: 0}
+  baseSegmentPrefab: {fileID: 5121505260559892191, guid: 05a01a27ca39ff44a817491415240d28, type: 3}
+  emptySegmentPrefab: {fileID: 1226411769783732533, guid: 1351ba6467bce6643b507d5111aee9e4, type: 3}
   segmentEmptyChance: 0.2
 --- !u!114 &1900228388891260160
 MonoBehaviour:

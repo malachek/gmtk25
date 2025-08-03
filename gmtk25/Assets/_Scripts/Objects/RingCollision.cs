@@ -20,7 +20,7 @@ public class RingCollision : MonoBehaviour
     private bool PlayerYOverlap;
 
     private float tempGroundY = 0f;
-    private float realGroundY = 0f;
+    private float realGroundY = 4f;
 
     private bool playerAboveObject = false;
 
@@ -52,32 +52,32 @@ public class RingCollision : MonoBehaviour
             {
                 if (playerToObjectXDistance < 0f) // left collision
                 {
-                    Debug.Log("Player to left of object, pushing");
+                    //Debug.Log("Player to left of object, pushing");
                     player.PushBack(Mathf.Max(playerToObjectXDistance, 0f));
                     //player.PushTo()
                 }
                 else
                 {
-                    Debug.Log($"Player to right of object, up by {playerToObjectYDistance}");
+                    //Debug.Log($"Player to right of object, up by {playerToObjectYDistance}");
                 }
             }
             if (!PlayerYOverlap) // above
             {
                 if (PlayerXOverlap)
                 {
-                    Debug.Log("Player is above object");
+                    //Debug.Log("Player is above object");
                     jump.SetGroundY(tempGroundY);
                     playerAboveObject = true;
                 }
                 else
                 {
-                    Debug.Log("Player is off object");
+                    //Debug.Log("Player is off object");
                 }
             }
         }
         if(!playerAboveObject)
         {
-            Debug.Log("Player is ALL object");
+            //Debug.Log("Player is ALL object");
 
             jump.SetGroundY(realGroundY);
         }

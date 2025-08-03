@@ -66,7 +66,7 @@ public class DiskSegmentManager : MonoBehaviour
     {
         for (int i = 0; i < SEGMENT_COUNT; ++i)
         {
-            Quaternion rotation = Quaternion.Euler(90f, 360f * i / SEGMENT_COUNT, 0f);
+            Quaternion rotation = Quaternion.Euler(0f, 360f * i / SEGMENT_COUNT, 0f);
             Vector3 position = transform.position - new Vector3(0f, spawnHeightOffset, 0f);
 
             segments[i] = Instantiate(baseSegmentPrefab, position, rotation, transform).GetComponent<Segment>();
