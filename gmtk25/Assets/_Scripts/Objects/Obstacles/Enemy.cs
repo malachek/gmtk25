@@ -15,10 +15,10 @@ public class Enemy : ObstacleBase
         if(other.CompareTag("PlayerProjectile"))
         {
             transform.localScale = startScale * Calculator.PowerToScale(--powerLevel);
-            Destroy(other.gameObject.transform.parent);
+            Destroy(other.gameObject);
 
             if (powerLevel <= 0)
-                Destroy(gameObject.transform.parent);
+                Destroy(gameObject);
         }
 
         if(other.CompareTag("Player"))
