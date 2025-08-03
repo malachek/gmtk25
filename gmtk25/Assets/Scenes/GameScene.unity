@@ -1944,6 +1944,7 @@ MonoBehaviour:
   fallMultiplier: 2
   PlayerSoundSource: {fileID: 985168410233695243}
   maxJumpTime: 0.1
+  animator: {fileID: 1312822711}
 --- !u!114 &4958270347211835054
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1967,6 +1968,8 @@ MonoBehaviour:
   maxDegrees: 350
   minDegrees: 10
   bilboard: {fileID: 1312822712}
+  animator: {fileID: 1312822711}
+  jump: {fileID: 4958270347211835053}
 --- !u!114 &4958270347211835055
 MonoBehaviour:
   m_ObjectHideFlags: 0

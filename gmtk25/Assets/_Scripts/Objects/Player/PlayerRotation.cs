@@ -19,6 +19,10 @@ public class PlayerRotation : RingObject
 
     private float pushBackVelocity;
 
+    [SerializeField] Animator animator;
+
+    [SerializeField] PlayerJump jump;
+
 
     private bool isSprinting = false;
 
@@ -97,6 +101,9 @@ public class PlayerRotation : RingObject
 
         Velocity = Mathf.Clamp(Velocity + deltaVelocity, -maxVelocity, maxVelocity);
         UpdateRotation();
+
+        if(jump.IsGrounded)
+            animator.Play("Froggy_Movement");
     }
 
     public void RotationInputRelease(bool releaseCW)
@@ -104,5 +111,8 @@ public class PlayerRotation : RingObject
         if (releaseCW && Velocity > 0f) Velocity = 0f;
         else if (!releaseCW && Velocity < 0f) Velocity = 0f;
         else Velocity = 0f;
+
+        if (Velocity == 0f && jump.IsGrounded)
+            animator.Play("Idle");
     }
 }

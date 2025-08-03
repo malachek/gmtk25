@@ -17,7 +17,9 @@ public class PlayerJump : MonoBehaviour
     private float jumpTimeCounter = 0f;
     private bool isJumpHeld = false;
     private float yVelocity = 0f;
-    private bool IsGrounded;
+    public bool IsGrounded { get; private set; }
+
+    [SerializeField] Animator animator;
 
     void Update()
     {
@@ -55,6 +57,7 @@ public class PlayerJump : MonoBehaviour
     {
         if (transform.position.y <= groundY)
         {
+            if (IsGrounded && !isJumpHeld) return;
             IsGrounded = true;
             isJumpHeld = false;
 
@@ -63,10 +66,13 @@ public class PlayerJump : MonoBehaviour
             Vector3 pos = transform.position;
             pos.y = groundY;
             transform.position = pos;
+            animator.Play("Idle");
+
         }
         else
         {
             IsGrounded = false;
+            animator.Play("Jump");
         }
     }
 
