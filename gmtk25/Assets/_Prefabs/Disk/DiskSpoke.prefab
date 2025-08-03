@@ -52,7 +52,7 @@ MonoBehaviour:
   - {fileID: 3887443572763762540, guid: 33df27b931878a34fa695d59efde203e, type: 3}
   emptySegmentPrefab: {fileID: 1564689358196566916, guid: 1351ba6467bce6643b507d5111aee9e4, type: 3}
   wallSegmentPrefab: {fileID: 1564689358196566916, guid: f9f4c18f95385bc45a846e77be4d7c22, type: 3}
-  segmentEmptyChance: 0.4
+  segmentEmptyChance: 0.2
 --- !u!114 &1900228388891260160
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66,11 +66,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstaclePrefabs:
-  - {fileID: 6884528960412247727, guid: bd4761c715211f445974445b23f7089d, type: 3}
-  - {fileID: 6884528960412247727, guid: aa4b4459134396d4eb49d9b7a035bef2, type: 3}
   - {fileID: 6884528960412247727, guid: 437a53423cf26ee4a9e1931fc7795586, type: 3}
   - {fileID: 6884528960412247727, guid: e59c9b0a187259a4787046e810448dc8, type: 3}
   - {fileID: 6884528960412247727, guid: e59c9b0a187259a4787046e810448dc8, type: 3}
   - {fileID: 6884528960412247727, guid: 29c58f6732b14b441a60f5dfce47a3e5, type: 3}
+  enemyPrefabs:
+  - {fileID: 6884528960412247727, guid: bd4761c715211f445974445b23f7089d, type: 3}
+  - {fileID: 6884528960412247727, guid: aa4b4459134396d4eb49d9b7a035bef2, type: 3}
   SpawnRate: 0.4
   ObstacleToEnemyProportion: 0.9

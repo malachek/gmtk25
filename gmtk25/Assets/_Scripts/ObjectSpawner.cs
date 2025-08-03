@@ -3,35 +3,38 @@ using UnityEngine;
 public class ObjectSpawner : MonoBehaviour
 {
     [SerializeField] GameObject[] obstaclePrefabs;
-    //[SerializeField] EnemyBase[] enemyPrefabs;
+    [SerializeField] GameObject[] enemyPrefabs;
 
     [SerializeField, Range(0f, 1f)] float SpawnRate;
     [SerializeField, Range(0.1f, .9f), Tooltip("x% obstacles, (1-x)% enemies")] float ObstacleToEnemyProportion;
 
     private int numObstaclePrefabVariants;
+    private int numEnemyPrefabVariants;
+
     //private float numEnemyPrefabVariants;
 
     private void Awake()
     {
         numObstaclePrefabVariants = obstaclePrefabs.Length;
+        numEnemyPrefabVariants = enemyPrefabs.Length;
     }
 
     public void SpawnPlatformObject(Transform parent, float spawnDegree, float spawnHeight)
     {
         if (Random.Range(0f, 1f) > SpawnRate) return;
 
+        GameObject toInstantiate;
+
         if (Random.Range(0f, 1f) < ObstacleToEnemyProportion)
         {
-            GameObject toInstantiate = obstaclePrefabs[Random.Range(0, numObstaclePrefabVariants)];
-            GameObject instantiated = Instantiate(toInstantiate, new Vector3(0f, spawnHeight, 0f), Quaternion.Euler(0, (spawnDegree + 270f) % 360f, 0), parent);
-
-            instantiated.transform.GetChild(0).GetComponentInChildren<ObstacleBase>().Initialize();
-            //Debug.Log($"Spawned {instantiated.name}");  
-            //spawn Obstacle
+            toInstantiate = obstaclePrefabs[Random.Range(0, numObstaclePrefabVariants)];
         }
         else
         {
-            //spawn Enemy
+            toInstantiate = enemyPrefabs[Random.Range(0, numEnemyPrefabVariants)];
         }
+        GameObject instantiated = Instantiate(toInstantiate, new Vector3(0f, parent.position.y, 0f), Quaternion.Euler(0, (spawnDegree + 270f) % 360f, 0), parent);
+
+        instantiated.transform.GetChild(0).GetComponentInChildren<ObstacleBase>().Initialize();
     }
 }
