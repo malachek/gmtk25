@@ -34,7 +34,7 @@ public class DiskSegmentManager : MonoBehaviour
 
     public bool IsDiskAtDgFake(float Dg)
     {
-        Debug.Log(Mathf.FloorToInt(Dg / 45));
+        //Debug.Log(Mathf.FloorToInt(Dg / 45));
         return !realVsFake[Mathf.FloorToInt(Dg / 45)];
     }
 

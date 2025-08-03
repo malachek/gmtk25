@@ -2,8 +2,10 @@ using UnityEngine;
 
 public class Teleporter : MonoBehaviour
 {
-    private void OnCollisionEnter(Collision collision)
+    public bool TpUp;
+    private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(collision);
+        Debug.Log(other);
+        other.transform.parent?.parent?.parent?.GetComponent<PlayerJump>()?.TeleportUpDown(TpUp);
     }
 }

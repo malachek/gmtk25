@@ -132,8 +132,8 @@ public class PlayerJump : MonoBehaviour
 
     public void TeleportUpDown(bool isUp)
     {
-        SetGroundY(groundY + 4);
-        transform.position += new Vector3(0f, 4f, 0f);
+        collision.realGroundY = groundY + (isUp?1f:-1f) * 4f;
+        transform.position += new Vector3(0f, (isUp ? 1f : -1f) * 4f, 0f);
     }
 
 }
