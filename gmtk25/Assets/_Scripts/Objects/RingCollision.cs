@@ -22,10 +22,14 @@ public class RingCollision : MonoBehaviour
     private float tempGroundY = 0f;
     private float realGroundY = 0f;
 
+    private bool playerAboveObject = false;
+
 
     void Update()
     {
         List<RingObject> objects = ObjectPooler.Instance.GetActiveObjects();
+
+        playerAboveObject = false;
 
         foreach (RingObject obj in objects)
         {
@@ -63,13 +67,19 @@ public class RingCollision : MonoBehaviour
                 {
                     Debug.Log("Player is above object");
                     jump.SetGroundY(tempGroundY);
+                    playerAboveObject = true;
                 }
                 else
                 {
                     Debug.Log("Player is off object");
-                    jump.SetGroundY(realGroundY);
                 }
             }
+        }
+        if(!playerAboveObject)
+        {
+            Debug.Log("Player is ALL object");
+
+            jump.SetGroundY(realGroundY);
         }
     }
 
@@ -90,7 +100,7 @@ public class RingCollision : MonoBehaviour
         if (playerToObjectYDistance <= 0f)
         {
             tempGroundY = objectTop;
-            Debug.Log($"Player is {playerToObjectYDistance} above objecttop");
+            //Debug.Log($"Player is {playerToObjectYDistance} above objecttop");
         }
 
         return playerToObjectYDistance > 0f;

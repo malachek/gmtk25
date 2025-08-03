@@ -72,6 +72,10 @@ public class PlayerRotation : RingObject
         //transform.Rotate(Vector3.up * Velocity * Time.deltaTime, Space.Self);
         Degrees = dg;
         transform.rotation = Quaternion.Euler(0, (dg - 90f) % 360f, 0);
+        if(dg > maxDegrees)
+        {
+            Application.Quit();
+        }
     }
 
     public void SetSprint(bool isSprint)

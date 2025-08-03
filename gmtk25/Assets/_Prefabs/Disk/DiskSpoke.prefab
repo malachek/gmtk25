@@ -62,6 +62,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstaclePrefabs:
-  - {fileID: 6884528960412247727, guid: 3628eda8ed3f7f742a52ff3665a3ed73, type: 3}
-  SpawnRate: 0
+  - {fileID: 6884528960412247727, guid: bd4761c715211f445974445b23f7089d, type: 3}
+  - {fileID: 6884528960412247727, guid: aa4b4459134396d4eb49d9b7a035bef2, type: 3}
+  - {fileID: 6884528960412247727, guid: 437a53423cf26ee4a9e1931fc7795586, type: 3}
+  - {fileID: 6884528960412247727, guid: e59c9b0a187259a4787046e810448dc8, type: 3}
+  SpawnRate: 0.2
   ObstacleToEnemyProportion: 0.6
