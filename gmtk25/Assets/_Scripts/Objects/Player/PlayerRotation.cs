@@ -15,6 +15,8 @@ public class PlayerRotation : RingObject
     [SerializeField] float maxDegrees = 350f;
     [SerializeField] float minDegrees = 10f;
 
+    [SerializeField] Bilboard bilboard;
+
     private float pushBackVelocity;
 
 
@@ -65,6 +67,8 @@ public class PlayerRotation : RingObject
         }
         Degrees = (Degrees + Velocity * Time.deltaTime) % 360f;
         RotatePlayerTo(Degrees);
+
+        bilboard.FaceRight(Velocity <= 0f);
     }
 
     private void RotatePlayerTo(float dg)
