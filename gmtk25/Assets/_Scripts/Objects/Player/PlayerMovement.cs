@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] PlayerRotation playerRotation;
     [SerializeField] PlayerJump playerJump;
+    [SerializeField] PlayerAttack playerAttack;
 
     public void RotationInputOverride(bool isCW)
     {
@@ -16,6 +17,11 @@ public class PlayerMovement : MonoBehaviour
     public void RotationInputRelease(bool releaseCW)
     {
         playerRotation.RotationInputRelease(releaseCW);
+    }
+    
+    public void Attack(bool isCS)
+    {
+        playerAttack.Attack(playerRotation.Degrees, isCS);
     }
 
     public void SetSprint(bool isSprint)

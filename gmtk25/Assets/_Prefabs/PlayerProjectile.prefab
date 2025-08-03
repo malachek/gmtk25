@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 1821208150024811798}
   - component: {fileID: 119203004637083164}
   - component: {fileID: 4723112884172813032}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sprite
-  m_TagString: Enemy
+  m_TagString: PlayerProjectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -109,10 +109,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5693100377823633551}
-  - component: {fileID: 7794833090173161428}
-  m_Layer: 0
+  - component: {fileID: 7480230048946619782}
+  m_Layer: 8
   m_Name: Obstacle
-  m_TagString: Enemy
+  m_TagString: PlayerProjectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -133,7 +133,7 @@ Transform:
   - {fileID: 1821208150024811798}
   m_Father: {fileID: 2505128077068171398}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7794833090173161428
+--- !u!114 &7480230048946619782
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -142,7 +142,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1651017255586270223}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49c3e28a95a30ae468e72686f5806a74, type: 3}
+  m_Script: {fileID: 11500000, guid: d58be129ceb93e148b300bba8f740651, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   YPos: 0
@@ -150,6 +150,8 @@ MonoBehaviour:
   initYHeight: 0
   rDistance: 0
   degreeXWidth: 0
+  VelocityDg: 90
+  rootTransform: {fileID: 1162934424872091005}
 --- !u!1 &2487496315324248537
 GameObject:
   m_ObjectHideFlags: 0
@@ -159,9 +161,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2505128077068171398}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ObstacleSpoke
-  m_TagString: Enemy
+  m_TagString: PlayerProjectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -191,9 +193,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1162934424872091005}
-  m_Layer: 0
-  m_Name: 2DEnemyBase
-  m_TagString: Enemy
+  m_Layer: 8
+  m_Name: PlayerProjectile
+  m_TagString: PlayerProjectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

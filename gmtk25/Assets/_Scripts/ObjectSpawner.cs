@@ -23,9 +23,9 @@ public class ObjectSpawner : MonoBehaviour
         if (Random.Range(0f, 1f) < ObstacleToEnemyProportion)
         {
             GameObject toInstantiate = obstaclePrefabs[Random.Range(0, numObstaclePrefabVariants)];
-            GameObject instantiated = Instantiate(toInstantiate, Vector3.zero, Quaternion.Euler(0, (spawnDegree - 90f) % 360f, 0), parent);
+            GameObject instantiated = Instantiate(toInstantiate, Vector3.zero, Quaternion.Euler(0, (spawnDegree + 270f) % 360f, 0), parent);
 
-            instantiated.transform.GetChild(0).GetComponentInChildren<ObstacleBase>().Initialize(spawnDegree, spawnHeight);
+            instantiated.transform.GetChild(0).GetComponentInChildren<ObstacleBase>().Initialize();
             //Debug.Log($"Spawned {instantiated.name}");  
             //spawn Obstacle
         }

@@ -23,7 +23,7 @@ public class PlayerRotation : RingObject
     protected override void Awake()
     {
         base.Awake();
-        Initialize(180f, 0f);
+        Initialize();
         maxVelocity = maxWalkVelocity;
     }
 
@@ -36,7 +36,7 @@ public class PlayerRotation : RingObject
 
     public void PushBack(float additionalPushback)
     {
-        Debug.Log($"Being pushed back by {additionalPushback}, surmounting to {Degrees + (pushBackVelocity - Velocity) * Time.deltaTime + additionalPushback}");
+        //Debug.Log($"Being pushed back by {additionalPushback}, surmounting to {Degrees + (pushBackVelocity - Velocity) * Time.deltaTime + additionalPushback}");
         RotatePlayerTo(Degrees + (pushBackVelocity - Velocity) * Time.deltaTime + additionalPushback);
 
         //if (Velocity > 0f)
