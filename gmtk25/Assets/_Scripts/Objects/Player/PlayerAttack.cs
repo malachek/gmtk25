@@ -3,6 +3,7 @@ using UnityEngine;
 public class PlayerAttack : MonoBehaviour
 {
     [SerializeField] GameObject projectilePrefab;
+    [SerializeField] public GameObject PlayerSoundLocation;
 
     float attackTimerMax = .5f;
     float attackTimer = 0f;
@@ -19,6 +20,6 @@ public class PlayerAttack : MonoBehaviour
         attackTimer = attackTimerMax;
         Projectile projectile = Instantiate(projectilePrefab).transform.GetChild(0).GetComponentInChildren<Projectile>();
         projectile.Initialize(Dg, transform.position.y, isCW);
-        //AudioManager.instance.PlayOneShot(FMODEvents.instance.BubbleShoot, this.transform.position);
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.BubbleShoot, PlayerSoundLocation.transform.position);
     }
 }

@@ -3033,6 +3033,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 6884528960412247727, guid: de757b20b349be04d9986f609484d42e, type: 3}
+  PlayerSoundLocation: {fileID: 985168410233695243}
 --- !u!4 &6072091035393654923
 Transform:
   m_ObjectHideFlags: 0

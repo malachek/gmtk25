@@ -22,9 +22,10 @@ public class Enemy : ObstacleBase
             Destroy(other);
             if (powerLevel <= 0)
                 Destroy(gameObject);
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.BubblePop, this.transform.position);
         }
 
-        if(other.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
             other.transform.parent.parent.parent.GetComponent<PlayerRotation>().PushBack(30f);
         }
